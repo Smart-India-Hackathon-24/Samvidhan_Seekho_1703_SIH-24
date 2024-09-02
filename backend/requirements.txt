@@ -2,5 +2,4 @@ fastapi
 uvicorn
 pymongo[srv]
 python-dotenv
-pymongo_schema
 cerberus
