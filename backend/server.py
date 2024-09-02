@@ -8,7 +8,7 @@ app = FastAPI()
 # Configure CORS
 origins = [
     "http://localhost:3000",
-    "https://your-frontend-domain.vercel.app",  # Add your Vercel frontend domain
+    "https://sih24-constitution-frontend.vercel.app", 
 ]
 
 app.add_middleware(
@@ -22,9 +22,8 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"Government": "Constitution of India is running properly 😊"}
 
 
 if __name__ == "__main__":
-    # port = int(os.environ.get("PORT", 5000))
     uvicorn.run(app, host="localhost", port=5000)
