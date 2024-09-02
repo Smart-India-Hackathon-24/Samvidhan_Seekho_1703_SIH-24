@@ -1,12 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+import os
 
 app = FastAPI()
 
 # Configure CORS
 origins = [
     "http://localhost:3000",
+    "https://your-frontend-domain.vercel.app",  # Add your Vercel frontend domain
 ]
 
 app.add_middleware(
@@ -23,5 +25,5 @@ async def root():
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=5000)
-
+    port = int(os.environ.get("PORT", 5000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
