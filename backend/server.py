@@ -19,11 +19,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    # port = int(os.environ.get("PORT", 5000))
+    uvicorn.run(app, host="localhost", port=5000)
