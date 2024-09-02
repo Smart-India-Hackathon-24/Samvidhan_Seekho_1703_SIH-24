@@ -1,14 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-import os
-
+from Database.DatabaseFunctions import addConstitutionSection
 app = FastAPI()
 
 # Configure CORS
 origins = [
     "http://localhost:3000",
-    "https://sih24-constitution-frontend.vercel.app", 
+    "https://sih24-constitution-frontend.vercel.app",
 ]
 
 app.add_middleware(
@@ -22,6 +21,16 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
+    addConstitutionSection(
+        part={"part_number": "PART I", "part_title": "Fundamental Rights"},
+        articles=[
+            {"article_number": "12", "article_title": "Right to Freedom of Religion"},
+            {
+                "article_number": "13",
+                "article_title": "Cultural and Educational Rights",
+            },
+        ],
+    )
     return {"Government": "Constitution of India is running properly 😊"}
 
 

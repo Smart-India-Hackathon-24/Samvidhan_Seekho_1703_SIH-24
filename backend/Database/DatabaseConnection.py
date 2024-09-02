@@ -1,6 +1,8 @@
 import os
-from pymongo import MongoClient
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 from dotenv import load_dotenv
+
 
 def connect_to_database():
     # Load environment variables from .env file
@@ -9,17 +11,20 @@ def connect_to_database():
     # Load MongoDB URI from environment variable
     mongo_uri = os.getenv("MONGO_URI")
 
-    # Create a MongoDB client instance
-    client = MongoClient(mongo_uri)
+    # Create a new client and connect to the server using Server API version 1
+    client = MongoClient(mongo_uri, server_api=ServerApi("1"))
+
+    # Send a ping to confirm a successful connection
+    try:
+        client.admin.command("ping")
+        print("Pinged your deployment. You successfully connected to MongoDB!")
+    except Exception as e:
+        print(e)
 
     # Specify the database name explicitly
-    db_name = os.getenv("MONGO_DB_NAME")  # Assuming the database name is stored in an environment variable
+    db_name = os.getenv(
+        "MONGO_DB_NAME"
+    )  # Assuming the database name is stored in an environment variable
     db = client[db_name]
-
-    # Print confirmation that the connection is established
-    print("MongoDB connection established to database:", db_name)
-
     return db
 
-# # Export the connect_to_database function for use in other files
-# __all__ = ["connect_to_database"]

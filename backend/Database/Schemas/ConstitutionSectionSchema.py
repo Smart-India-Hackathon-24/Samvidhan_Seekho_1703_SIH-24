@@ -1,26 +1,39 @@
-from pymongo import collection
-from backend.Database.DatabaseConnection import connect_to_database
+from cerberus import Validator
 
-class ConstitutionSectionSchema:
-    def __init__(self):
-        db = connect_to_database()
-        self.collection = db['sections']
-
-    def create_section(self, part, articles):
-        section_document = {
-            "Part": {
-                "part_number": part['part_number'],
-                "part_title": part['part_title']
-            },
-            "Articles": [
-                {"article_number": article['article_number'], "article_title": article['article_title']}
-                for article in articles
-            ]
+def validate_section_schema(part, articles):
+    schema = {
+        'Part': {
+            'type': 'dict',
+            'schema': {
+                'part_number': {'type': 'string'},
+                'part_title': {'type': 'string'}
+            }
+        },
+        'Articles': {
+            'type': 'list',
+            'schema': {
+                'type': 'dict',
+                'schema': {
+                    'article_number': {'type': 'string'},
+                    'article_title': {'type': 'string'}
+                }
+            }
         }
-        return self.collection.insert_one(section_document)
+    }
 
-    def get_all_sections(self):
-        return list(self.collection.find({}))
+    section_document = {
+        "Part": {
+            "part_number": part['part_number'],
+            "part_title": part['part_title']
+        },
+        "Articles": [
+            {"article_number": article['article_number'], "article_title": article['article_title']}
+            for article in articles
+        ]
+    }
 
-    def get_section_by_part_number(self, part_number):
-        return self.collection.find_one({"Part.part_number": part_number})
+    v = Validator(schema)
+    if v.validate(section_document):
+        return True
+    else:
+        return v.errors
