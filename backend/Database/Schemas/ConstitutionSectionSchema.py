@@ -1,6 +1,7 @@
 from cerberus import Validator
+import asyncio
 
-def validate_section_schema(part, articles):
+async def validate_section_schema(part, articles):
     schema = {
         'Part': {
             'type': 'dict',
