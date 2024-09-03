@@ -1,8 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
 import uvicorn
-from Database.DatabaseFunctions import addConstitutionSection
+from Main import extractArticlesDataFromJSONandAddToDatabase
+from Database.DatabaseFunctions import *
 
 app = FastAPI()
 
@@ -21,13 +22,42 @@ app.add_middleware(
 )
 
 
-@app.get("/")
+connection_router = APIRouter(tags=["Connection Status"])
+
+
+@connection_router.get("/")
 async def root():
     return {"Government": "Constitution of India is running properly 😊"}
 
-@app.get("/addConstitutionSection")
-async def add_constitution_section():
-    return {"message": "Constitution section added successfully"}
+
+constitution_partition_router = APIRouter(tags=["Constitution Partitions"])
+
+
+@constitution_partition_router.get("/addConstitutionPartition")
+async def add_constitution_partition():
+    return {"message": "Constitution partition added successfully"}
+
+
+constitution_article_router = APIRouter(tags=["Constitution Articles"])
+
+
+@constitution_article_router.get("/addConstitutionArticle")
+async def add_constitution_article():
+    extractArticlesDataFromJSONandAddToDatabase()
+    return {"message": "Constitution article added successfully"}
+
+
+@constitution_article_router.delete("/deleteAllArticles")
+async def delete_constitution_article():
+    deleteAllArticlesFromDatabase()
+    return {"message": "All articles deleted successfully"}
+
+
+# Include routers in the main app
+app.include_router(connection_router)
+app.include_router(constitution_partition_router)
+app.include_router(constitution_article_router)
+
 
 def custom_openapi():
     if app.openapi_schema:
@@ -40,6 +70,7 @@ def custom_openapi():
     )
     app.openapi_schema = openapi_schema
     return app.openapi_schema
+
 
 app.openapi = custom_openapi
 
