@@ -1,0 +1,27 @@
+[
+	{
+		"partition_number": "Part 5",
+		"partition_title": "The Union Government",
+		"sub_partitions": [
+			{
+				"partition_title": "Chapter 1",
+				"sub_partitions": [
+					{
+						"partition_title": "General",
+						"sub_partitions": [
+							{
+								"partition_title": "Atricle - 1"
+							},
+							{
+								"partition_title": "Atricle - 2"
+							},
+							{
+								"partition_title": "Atricle - 3"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
