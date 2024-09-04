@@ -112,7 +112,7 @@ export default function NavDock() {
 							</CustomToolTip>
 						</DockIcon>
 					))}
-					<Separator orientation="vertical" className="h-full bg-gray-700" />
+					<Separator orientation="vertical" className="h-full bg-black/30" />
 					{Object.entries(DATA.contact.social).map(([name, social]) => (
 						<DockIcon key={name} asChild>
 							<CustomToolTip title={social.name}>
@@ -125,7 +125,7 @@ export default function NavDock() {
 							</CustomToolTip>
 						</DockIcon>
 					))}
-					<Separator orientation="vertical" className="h-full py-2" />
+					<Separator orientation="vertical" className="h-full bg-black/30" />
 
 					{Object.entries(DATA.utility).map(([name, utility]) => {
 						const IconComponent =
