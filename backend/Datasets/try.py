@@ -19,8 +19,11 @@ def parse_markdown(file_path):
                 data.append(current_part)
             part_match = re.match(r'### <p align="center"> PART ([IVXLC]+)', line)
             if part_match:
+                
                 part_number = part_match.group(1)
                 part_title = lines[lines.index(line) + 1].strip()
+                part_title=part_title.replace('#### <p align="center">','').strip()
+                part_title = part_title.replace('</p>', "").strip()
                 current_part = {
                     "partition_number": f"Part {part_number}",
                     "partition_title": part_title,
@@ -33,6 +36,8 @@ def parse_markdown(file_path):
             if chapter_match:
                 chapter_number = chapter_match.group(1)
                 chapter_title = line.split(".")[-1].strip()
+                chapter_title=chapter_title.replace('#### <p align="center">','').strip()
+                chapter_title = chapter_title.replace('</p>', "").strip()
                 current_chapter = {
                     "partition_title": f"Chapter {chapter_number}. {chapter_title}",
                     "sub_partitions": [],
@@ -40,7 +45,9 @@ def parse_markdown(file_path):
                 current_part["sub_partitions"].append(current_chapter)
                 current_section = None
         elif line.startswith('##### <p align="center">'):
-            section_title = line.replace('##### <p align="center">', "").strip()
+            line=line.replace('#### <p align="center">','').strip()
+            section_title = line.replace('</p>', "").strip()
+            section_title=section_title.replace('#', '').replace('*', '').strip()  
             current_section = {"partition_title": section_title, "sub_partitions": []}
             if current_chapter:
                 current_chapter["sub_partitions"].append(current_section)
@@ -52,7 +59,8 @@ def parse_markdown(file_path):
                 article_number = article_match.group(1)
                 article_title = article_match.group(2)
                 article = {
-                    "partition_title": f"Article - {article_number}. {article_title}"
+                    "article_number":f"Article - {article_number}",
+                    "partition_title": f"{article_title}"
                 }
                 if current_section:
                     current_section["sub_partitions"].append(article)

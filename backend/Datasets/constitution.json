@@ -1,161 +1,196 @@
 [
   {
     "partition_number": "Part I",
-    "partition_title": "#### <p align=\"center\"> THE UNION AND ITS TERRITORY  </p>",
+    "partition_title": "THE UNION AND ITS TERRITORY",
     "sub_partitions": [
       {
-        "partition_title": "Article - 1. Name and territory of the Union.  "
+        "article_number": "Article - 1",
+        "partition_title": "Name and territory of the Union.  "
       },
       {
-        "partition_title": "Article - 2. Admission or establishment of new States.  "
+        "article_number": "Article - 2",
+        "partition_title": "Admission or establishment of new States.  "
       },
       {
-        "partition_title": "Article - 3. Formation of new States and alteration of areas, boundaries or names of existing  States.  "
+        "article_number": "Article - 3",
+        "partition_title": "Formation of new States and alteration of areas, boundaries or names of existing  States.  "
       },
       {
-        "partition_title": "Article - 4. Laws  made  under  articles  2  and  3  to  provide  for  the  amendment  of  the  First  and  the  Fourth Schedules and supplemental, incidental and consequential matters.  "
+        "article_number": "Article - 4",
+        "partition_title": "Laws  made  under  articles  2  and  3  to  provide  for  the  amendment  of  the  First  and  the  Fourth Schedules and supplemental, incidental and consequential matters.  "
       }
     ]
   },
   {
     "partition_number": "Part II",
-    "partition_title": "#### <p align=\"center\"> CITIZENSHIP  </p>",
+    "partition_title": "CITIZENSHIP",
     "sub_partitions": [
       {
-        "partition_title": "Article - 5. Citizenship at the commencement of the Constitution.  "
+        "article_number": "Article - 5",
+        "partition_title": "Citizenship at the commencement of the Constitution.  "
       },
       {
-        "partition_title": "Article - 6. Rights of citizenship of certain persons who have migrated to India from Pakistan.  "
+        "article_number": "Article - 6",
+        "partition_title": "Rights of citizenship of certain persons who have migrated to India from Pakistan.  "
       },
       {
-        "partition_title": "Article - 7. Rights of citizenship of certain migrants to Pakistan.  "
+        "article_number": "Article - 7",
+        "partition_title": "Rights of citizenship of certain migrants to Pakistan.  "
       },
       {
-        "partition_title": "Article - 8. Rights of citizenship of certain persons of Indian origin residing   outside India.  "
+        "article_number": "Article - 8",
+        "partition_title": "Rights of citizenship of certain persons of Indian origin residing   outside India.  "
       },
       {
-        "partition_title": "Article - 9. Persons voluntarily acquiring citizenship of a foreign State not to be citizens.  "
+        "article_number": "Article - 9",
+        "partition_title": "Persons voluntarily acquiring citizenship of a foreign State not to be citizens.  "
       },
       {
-        "partition_title": "Article - 10. Continuance of the rights of citizenship.  "
+        "article_number": "Article - 10",
+        "partition_title": "Continuance of the rights of citizenship.  "
       },
       {
-        "partition_title": "Article - 11. Parliament to regulate the right of citizenship by law.  "
+        "article_number": "Article - 11",
+        "partition_title": "Parliament to regulate the right of citizenship by law.  "
       }
     ]
   },
   {
     "partition_number": "Part III",
-    "partition_title": "#### <p align=\"center\"> FUNDAMENTAL RIGHTS </p>",
+    "partition_title": "FUNDAMENTAL RIGHTS",
     "sub_partitions": [
       {
-        "partition_title": "*General* </p>",
+        "partition_title": "General",
         "sub_partitions": [
           {
-            "partition_title": "Article - 12. Definition.  "
+            "article_number": "Article - 12",
+            "partition_title": "Definition.  "
           },
           {
-            "partition_title": "Article - 13. Laws inconsistent with or in derogation of the fundamental rights.  "
+            "article_number": "Article - 13",
+            "partition_title": "Laws inconsistent with or in derogation of the fundamental rights.  "
           }
         ]
       },
       {
-        "partition_title": "*Right to Equality* </p>",
+        "partition_title": "Right to Equality",
         "sub_partitions": [
           {
-            "partition_title": "Article - 14. Equality before law.  "
+            "article_number": "Article - 14",
+            "partition_title": "Equality before law.  "
           },
           {
-            "partition_title": "Article - 15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.  "
+            "article_number": "Article - 15",
+            "partition_title": "Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.  "
           },
           {
-            "partition_title": "Article - 16. Equality of opportunity in matters of public employment.   "
+            "article_number": "Article - 16",
+            "partition_title": "Equality of opportunity in matters of public employment.   "
           },
           {
-            "partition_title": "Article - 17. Abolition of Untouchability.  "
+            "article_number": "Article - 17",
+            "partition_title": "Abolition of Untouchability.  "
           },
           {
-            "partition_title": "Article - 18. Abolition of titles.  "
+            "article_number": "Article - 18",
+            "partition_title": "Abolition of titles.  "
           }
         ]
       },
       {
-        "partition_title": "*Right to Freedom* </p>",
+        "partition_title": "Right to Freedom",
         "sub_partitions": [
           {
-            "partition_title": "Article - 19. Protection of certain rights regarding freedom of speech, etc.  "
+            "article_number": "Article - 19",
+            "partition_title": "Protection of certain rights regarding freedom of speech, etc.  "
           },
           {
-            "partition_title": "Article - 20. Protection in respect of conviction for offences.  "
+            "article_number": "Article - 20",
+            "partition_title": "Protection in respect of conviction for offences.  "
           },
           {
-            "partition_title": "Article - 21. Protection of life and personal liberty.  "
+            "article_number": "Article - 21",
+            "partition_title": "Protection of life and personal liberty.  "
           },
           {
-            "partition_title": "Article - 22. Protection against arrest and detention in certain cases.  "
+            "article_number": "Article - 22",
+            "partition_title": "Protection against arrest and detention in certain cases.  "
           }
         ]
       },
       {
-        "partition_title": "*Right against Exploitation* </p>",
+        "partition_title": "Right against Exploitation",
         "sub_partitions": [
           {
-            "partition_title": "Article - 23. Prohibition of traffic in human beings and forced labour.  "
+            "article_number": "Article - 23",
+            "partition_title": "Prohibition of traffic in human beings and forced labour.  "
           },
           {
-            "partition_title": "Article - 24. Prohibition of employment of children in factories, etc.  "
+            "article_number": "Article - 24",
+            "partition_title": "Prohibition of employment of children in factories, etc.  "
           }
         ]
       },
       {
-        "partition_title": "*Right to  Freedom of Religion* </p>",
+        "partition_title": "Right to  Freedom of Religion",
         "sub_partitions": [
           {
-            "partition_title": "Article - 25. Freedom of conscience andfree profession, practice and propagation of religion.  "
+            "article_number": "Article - 25",
+            "partition_title": "Freedom of conscience andfree profession, practice and propagation of religion.  "
           },
           {
-            "partition_title": "Article - 26. Freedom to manage religious affairs.  "
+            "article_number": "Article - 26",
+            "partition_title": "Freedom to manage religious affairs.  "
           },
           {
-            "partition_title": "Article - 27. Freedom as to payment of taxes for promotion of any particular religion.  "
+            "article_number": "Article - 27",
+            "partition_title": "Freedom as to payment of taxes for promotion of any particular religion.  "
           },
           {
-            "partition_title": "Article - 28. Freedom  as  to  attendance  at  religious  instruction  or  religious  worship  in certain  educational institutions.  "
+            "article_number": "Article - 28",
+            "partition_title": "Freedom  as  to  attendance  at  religious  instruction  or  religious  worship  in certain  educational institutions.  "
           }
         ]
       },
       {
-        "partition_title": "*Cultural and Educational Rights* </p>",
+        "partition_title": "Cultural and Educational Rights",
         "sub_partitions": [
           {
-            "partition_title": "Article - 29. Protection of interests of minorities.  "
+            "article_number": "Article - 29",
+            "partition_title": "Protection of interests of minorities.  "
           },
           {
-            "partition_title": "Article - 30. Right of minorities to establish and administer educational institutions.  "
+            "article_number": "Article - 30",
+            "partition_title": "Right of minorities to establish and administer educational institutions.  "
           },
           {
-            "partition_title": "Article - 31. [Omitted.]"
+            "article_number": "Article - 31",
+            "partition_title": "[Omitted.]"
           }
         ]
       },
       {
-        "partition_title": "*Saving of Certain Laws* </p>",
+        "partition_title": "Saving of Certain Laws",
         "sub_partitions": []
       },
       {
-        "partition_title": "*Right to Constitutional Remedies* </p>",
+        "partition_title": "Right to Constitutional Remedies",
         "sub_partitions": [
           {
-            "partition_title": "Article - 32. Remedies for enforcement of rights conferred by this Part.  "
+            "article_number": "Article - 32",
+            "partition_title": "Remedies for enforcement of rights conferred by this Part.  "
           },
           {
-            "partition_title": "Article - 33. Power of Parliament to modify the rights conferred by this Part in their application to Forces, etc.  "
+            "article_number": "Article - 33",
+            "partition_title": "Power of Parliament to modify the rights conferred by this Part in their application to Forces, etc.  "
           },
           {
-            "partition_title": "Article - 34. Restriction on rights conferred by this Part while martial law is in force in any area.  "
+            "article_number": "Article - 34",
+            "partition_title": "Restriction on rights conferred by this Part while martial law is in force in any area.  "
           },
           {
-            "partition_title": "Article - 35. Legislation to give effect to the provisions of this Part.  "
+            "article_number": "Article - 35",
+            "partition_title": "Legislation to give effect to the provisions of this Part.  "
           }
         ]
       }
@@ -163,430 +198,543 @@
   },
   {
     "partition_number": "Part IV",
-    "partition_title": "#### <p align=\"center\"> DIRECTIVE PRINCIPLES OF STATE POLICY </p>",
+    "partition_title": "DIRECTIVE PRINCIPLES OF STATE POLICY",
     "sub_partitions": [
       {
-        "partition_title": "Article - 36. Definition.  "
+        "article_number": "Article - 36",
+        "partition_title": "Definition.  "
       },
       {
-        "partition_title": "Article - 37. Application of the principles contained in this Part.  "
+        "article_number": "Article - 37",
+        "partition_title": "Application of the principles contained in this Part.  "
       },
       {
-        "partition_title": "Article - 38. State to secure a social order for the promotion of welfare of the people.  "
+        "article_number": "Article - 38",
+        "partition_title": "State to secure a social order for the promotion of welfare of the people.  "
       },
       {
-        "partition_title": "Article - 39. Certain principles of policy to be followed by the State.  "
+        "article_number": "Article - 39",
+        "partition_title": "Certain principles of policy to be followed by the State.  "
       },
       {
-        "partition_title": "Article - 40. Organisation of village panchayats.  "
+        "article_number": "Article - 40",
+        "partition_title": "Organisation of village panchayats.  "
       },
       {
-        "partition_title": "Article - 41. Right to work, to education and to public assistance in certain cases.  "
+        "article_number": "Article - 41",
+        "partition_title": "Right to work, to education and to public assistance in certain cases.  "
       },
       {
-        "partition_title": "Article - 42. Provision for just and humane conditions of work and maternity relief.  "
+        "article_number": "Article - 42",
+        "partition_title": "Provision for just and humane conditions of work and maternity relief.  "
       },
       {
-        "partition_title": "Article - 43. Living wage, etc., for workers.43A.Participation of workers in management of industries  "
+        "article_number": "Article - 43",
+        "partition_title": "Living wage, etc., for workers.43A.Participation of workers in management of industries  "
       },
       {
-        "partition_title": "Article - 44. Uniform civil code for the citizens.  "
+        "article_number": "Article - 44",
+        "partition_title": "Uniform civil code for the citizens.  "
       },
       {
-        "partition_title": "Article - 45. Provision for early childhood care and education to children below the age of six years.  "
+        "article_number": "Article - 45",
+        "partition_title": "Provision for early childhood care and education to children below the age of six years.  "
       },
       {
-        "partition_title": "Article - 46. Promotion of educational and economic interests of Scheduled Castes, Scheduled Tribes and other weaker sections.  "
+        "article_number": "Article - 46",
+        "partition_title": "Promotion of educational and economic interests of Scheduled Castes, Scheduled Tribes and other weaker sections.  "
       },
       {
-        "partition_title": "Article - 47. Duty of the  State to raise the  level of nutrition and the  standard of living and to improve  public health.  "
+        "article_number": "Article - 47",
+        "partition_title": "Duty of the  State to raise the  level of nutrition and the  standard of living and to improve  public health.  "
       },
       {
-        "partition_title": "Article - 48. Organisation of agriculture and animal husbandry.  "
+        "article_number": "Article - 48",
+        "partition_title": "Organisation of agriculture and animal husbandry.  "
       },
       {
-        "partition_title": "Article - 49. Protection of monuments and places and objects of national importance.  "
+        "article_number": "Article - 49",
+        "partition_title": "Protection of monuments and places and objects of national importance.  "
       },
       {
-        "partition_title": "Article - 50. Separation of judiciary from executive.  "
+        "article_number": "Article - 50",
+        "partition_title": "Separation of judiciary from executive.  "
       },
       {
-        "partition_title": "Article - 51. Promotion of international peace and security.  "
+        "article_number": "Article - 51",
+        "partition_title": "Promotion of international peace and security.  "
       }
     ]
   },
   {
     "partition_number": "Part IV",
-    "partition_title": "#### <p align=\"center\"> FUNDAMENTAL DUTIES </p>",
+    "partition_title": "FUNDAMENTAL DUTIES",
     "sub_partitions": []
   },
   {
     "partition_number": "Part V",
-    "partition_title": "#### <p align=\"center\"> THE UNION </p>",
+    "partition_title": "THE UNION",
     "sub_partitions": [
       {
-        "partition_title": "Chapter I. #### <p align=\"center\"> CHAPTER I THE EXECUTIVE </p>",
+        "partition_title": "Chapter I. CHAPTER I THE EXECUTIVE",
         "sub_partitions": [
           {
-            "partition_title": "*The President and Vice-President* </p>",
+            "partition_title": "The President and Vice-President",
             "sub_partitions": [
               {
-                "partition_title": "Article - 52. The President of India.   "
+                "article_number": "Article - 52",
+                "partition_title": "The President of India.   "
               },
               {
-                "partition_title": "Article - 53. Executive power of the Union.  "
+                "article_number": "Article - 53",
+                "partition_title": "Executive power of the Union.  "
               },
               {
-                "partition_title": "Article - 54. Election of President.  "
+                "article_number": "Article - 54",
+                "partition_title": "Election of President.  "
               },
               {
-                "partition_title": "Article - 55. Manner of election of President.  "
+                "article_number": "Article - 55",
+                "partition_title": "Manner of election of President.  "
               },
               {
-                "partition_title": "Article - 56. Term of office of President.  "
+                "article_number": "Article - 56",
+                "partition_title": "Term of office of President.  "
               },
               {
-                "partition_title": "Article - 57. Eligibility for re-election.  "
+                "article_number": "Article - 57",
+                "partition_title": "Eligibility for re-election.  "
               },
               {
-                "partition_title": "Article - 58. Qualifications for election as President.  "
+                "article_number": "Article - 58",
+                "partition_title": "Qualifications for election as President.  "
               },
               {
-                "partition_title": "Article - 59. Conditions of President’s office.  "
+                "article_number": "Article - 59",
+                "partition_title": "Conditions of President’s office.  "
               },
               {
-                "partition_title": "Article - 60. Oath or affirmation by the President.  "
+                "article_number": "Article - 60",
+                "partition_title": "Oath or affirmation by the President.  "
               },
               {
-                "partition_title": "Article - 61. Procedure for impeachment of the President.  "
+                "article_number": "Article - 61",
+                "partition_title": "Procedure for impeachment of the President.  "
               },
               {
-                "partition_title": "Article - 62. Time of holding election to fill vacancy in the office of President and the term of office of person elected to fill casual vacancy.  "
+                "article_number": "Article - 62",
+                "partition_title": "Time of holding election to fill vacancy in the office of President and the term of office of person elected to fill casual vacancy.  "
               },
               {
-                "partition_title": "Article - 63. The Vice-President of India.  "
+                "article_number": "Article - 63",
+                "partition_title": "The Vice-President of India.  "
               },
               {
-                "partition_title": "Article - 64. The Vice-President to be ex officioChairman of the Council of States.  "
+                "article_number": "Article - 64",
+                "partition_title": "The Vice-President to be ex officioChairman of the Council of States.  "
               },
               {
-                "partition_title": "Article - 65. The  Vice-President  to  act  as  President  or  to  discharge  his  functions  during  casual vacancies in the office, or during the absence, of President.  "
+                "article_number": "Article - 65",
+                "partition_title": "The  Vice-President  to  act  as  President  or  to  discharge  his  functions  during  casual vacancies in the office, or during the absence, of President.  "
               },
               {
-                "partition_title": "Article - 66. Election of Vice-President.  "
+                "article_number": "Article - 66",
+                "partition_title": "Election of Vice-President.  "
               },
               {
-                "partition_title": "Article - 67. Term of office of Vice-President.  "
+                "article_number": "Article - 67",
+                "partition_title": "Term of office of Vice-President.  "
               },
               {
-                "partition_title": "Article - 68. Time of holding election to fill vacancy in the office of Vice-President and the term of office of person elected to fill casual vacancy.  "
+                "article_number": "Article - 68",
+                "partition_title": "Time of holding election to fill vacancy in the office of Vice-President and the term of office of person elected to fill casual vacancy.  "
               },
               {
-                "partition_title": "Article - 69. Oath or affirmation by the Vice-President.  "
+                "article_number": "Article - 69",
+                "partition_title": "Oath or affirmation by the Vice-President.  "
               },
               {
-                "partition_title": "Article - 70. Discharge of President’s functions in other contingencies.71.Matters relating to, or connected with, the election of a President or Vice-President.  "
+                "article_number": "Article - 70",
+                "partition_title": "Discharge of President’s functions in other contingencies.71.Matters relating to, or connected with, the election of a President or Vice-President.  "
               },
               {
-                "partition_title": "Article - 72. Power of President to grant pardons, etc., and to suspend, remit or commute sentences in certain cases."
+                "article_number": "Article - 72",
+                "partition_title": "Power of President to grant pardons, etc., and to suspend, remit or commute sentences in certain cases."
               },
               {
-                "partition_title": "Article - 73. Extent of executive power of the Union."
+                "article_number": "Article - 73",
+                "partition_title": "Extent of executive power of the Union."
               }
             ]
           },
           {
-            "partition_title": "*Council of Ministers* </p>",
+            "partition_title": "Council of Ministers",
             "sub_partitions": [
               {
-                "partition_title": "Article - 74. Council of Ministers to aid and advise President.  "
+                "article_number": "Article - 74",
+                "partition_title": "Council of Ministers to aid and advise President.  "
               },
               {
-                "partition_title": "Article - 75. Other provisions as to Ministers."
+                "article_number": "Article - 75",
+                "partition_title": "Other provisions as to Ministers."
               }
             ]
           },
           {
-            "partition_title": "*The Attorney-General for India* </p>",
+            "partition_title": "The Attorney-General for India",
             "sub_partitions": [
               {
-                "partition_title": "Article - 76. Attorney-General for India."
+                "article_number": "Article - 76",
+                "partition_title": "Attorney-General for India."
               }
             ]
           },
           {
-            "partition_title": "*Conduct of Government Business* </p>",
+            "partition_title": "Conduct of Government Business",
             "sub_partitions": [
               {
-                "partition_title": "Article - 77. Conduct of business of the Government of India.  "
+                "article_number": "Article - 77",
+                "partition_title": "Conduct of business of the Government of India.  "
               },
               {
-                "partition_title": "Article - 78. Duties of Prime Minister as respects the furnishing of information to the President, etc."
+                "article_number": "Article - 78",
+                "partition_title": "Duties of Prime Minister as respects the furnishing of information to the President, etc."
               }
             ]
           },
           {
-            "partition_title": "*General* </p>",
+            "partition_title": "General",
             "sub_partitions": [
               {
-                "partition_title": "Article - 79. Constitution of Parliament.  "
+                "article_number": "Article - 79",
+                "partition_title": "Constitution of Parliament.  "
               },
               {
-                "partition_title": "Article - 80. Composition of the Council of States.  "
+                "article_number": "Article - 80",
+                "partition_title": "Composition of the Council of States.  "
               },
               {
-                "partition_title": "Article - 81. Composition of the House of the People.  "
+                "article_number": "Article - 81",
+                "partition_title": "Composition of the House of the People.  "
               },
               {
-                "partition_title": "Article - 82. Readjustment after each census.  "
+                "article_number": "Article - 82",
+                "partition_title": "Readjustment after each census.  "
               },
               {
-                "partition_title": "Article - 83. Duration of Houses of Parliament.  "
+                "article_number": "Article - 83",
+                "partition_title": "Duration of Houses of Parliament.  "
               },
               {
-                "partition_title": "Article - 84. Qualification for membership of Parliament.  "
+                "article_number": "Article - 84",
+                "partition_title": "Qualification for membership of Parliament.  "
               },
               {
-                "partition_title": "Article - 85. Sessions of Parliament, prorogation and dissolution.  "
+                "article_number": "Article - 85",
+                "partition_title": "Sessions of Parliament, prorogation and dissolution.  "
               },
               {
-                "partition_title": "Article - 86. Right of President to address and send messages to Houses.  "
+                "article_number": "Article - 86",
+                "partition_title": "Right of President to address and send messages to Houses.  "
               },
               {
-                "partition_title": "Article - 87. Special address by the President.  "
+                "article_number": "Article - 87",
+                "partition_title": "Special address by the President.  "
               },
               {
-                "partition_title": "Article - 88. Rights of Ministers and Attorney-General as respects Houses."
+                "article_number": "Article - 88",
+                "partition_title": "Rights of Ministers and Attorney-General as respects Houses."
               }
             ]
           },
           {
-            "partition_title": "*Officers of Parliament* </p>",
+            "partition_title": "Officers of Parliament",
             "sub_partitions": [
               {
-                "partition_title": "Article - 89. The Chairman and Deputy Chairman of the Council of States.  "
+                "article_number": "Article - 89",
+                "partition_title": "The Chairman and Deputy Chairman of the Council of States.  "
               },
               {
-                "partition_title": "Article - 90. Vacation and resignation of, and removal from, the office of Deputy Chairman.  "
+                "article_number": "Article - 90",
+                "partition_title": "Vacation and resignation of, and removal from, the office of Deputy Chairman.  "
               },
               {
-                "partition_title": "Article - 91. Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman."
+                "article_number": "Article - 91",
+                "partition_title": "Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman."
               },
               {
-                "partition_title": "Article - 92. The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under consideration.  "
+                "article_number": "Article - 92",
+                "partition_title": "The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under consideration.  "
               },
               {
-                "partition_title": "Article - 93. The Speaker and Deputy Speaker of the House of the People.  "
+                "article_number": "Article - 93",
+                "partition_title": "The Speaker and Deputy Speaker of the House of the People.  "
               },
               {
-                "partition_title": "Article - 94. Vacation and resignation of, and removal from, the offices of Speaker and Deputy Speaker.  "
+                "article_number": "Article - 94",
+                "partition_title": "Vacation and resignation of, and removal from, the offices of Speaker and Deputy Speaker.  "
               },
               {
-                "partition_title": "Article - 95. Power of the Deputy Speaker or other person to perform the duties of the office of, or to act as, Speaker.  "
+                "article_number": "Article - 95",
+                "partition_title": "Power of the Deputy Speaker or other person to perform the duties of the office of, or to act as, Speaker.  "
               },
               {
-                "partition_title": "Article - 96. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration.  "
+                "article_number": "Article - 96",
+                "partition_title": "The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration.  "
               },
               {
-                "partition_title": "Article - 97. Salaries  and  allowances  of  the  Chairman  and  Deputy  Chairman  and  the  Speaker  and  Deputy Speaker.  "
+                "article_number": "Article - 97",
+                "partition_title": "Salaries  and  allowances  of  the  Chairman  and  Deputy  Chairman  and  the  Speaker  and  Deputy Speaker.  "
               },
               {
-                "partition_title": "Article - 98. Secretariat of Parliament.Conduct of Business  "
+                "article_number": "Article - 98",
+                "partition_title": "Secretariat of Parliament.Conduct of Business  "
               },
               {
-                "partition_title": "Article - 99. Oath or affirmation by members.  "
+                "article_number": "Article - 99",
+                "partition_title": "Oath or affirmation by members.  "
               },
               {
-                "partition_title": "Article - 100. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum."
+                "article_number": "Article - 100",
+                "partition_title": "Voting in Houses, power of Houses to act notwithstanding vacancies and quorum."
               }
             ]
           },
           {
-            "partition_title": "*Disqualifications of Members* </p>",
+            "partition_title": "Disqualifications of Members",
             "sub_partitions": [
               {
-                "partition_title": "Article - 101. Vacation of seats.  "
+                "article_number": "Article - 101",
+                "partition_title": "Vacation of seats.  "
               },
               {
-                "partition_title": "Article - 102. Disqualifications for membership.  "
+                "article_number": "Article - 102",
+                "partition_title": "Disqualifications for membership.  "
               },
               {
-                "partition_title": "Article - 103. Decision on questions as to disqualifications of members.  "
+                "article_number": "Article - 103",
+                "partition_title": "Decision on questions as to disqualifications of members.  "
               },
               {
-                "partition_title": "Article - 104. Penalty  for  sitting  and  voting  before  making  oath  or  affirmation  under  article  99  or  when  not qualified or when disqualified.  "
+                "article_number": "Article - 104",
+                "partition_title": "Penalty  for  sitting  and  voting  before  making  oath  or  affirmation  under  article  99  or  when  not qualified or when disqualified.  "
               }
             ]
           },
           {
-            "partition_title": "*Powers, Privileges and Immunities of Parliament and its Members* </p>",
+            "partition_title": "Powers, Privileges and Immunities of Parliament and its Members",
             "sub_partitions": [
               {
-                "partition_title": "Article - 105. Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof.  "
+                "article_number": "Article - 105",
+                "partition_title": "Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof.  "
               },
               {
-                "partition_title": "Article - 106. Salaries and allowances of members."
+                "article_number": "Article - 106",
+                "partition_title": "Salaries and allowances of members."
               }
             ]
           },
           {
-            "partition_title": "*Legislative Procedure* </p>",
+            "partition_title": "Legislative Procedure",
             "sub_partitions": [
               {
-                "partition_title": "Article - 107. Provisions as to introduction and passing of Bills.  "
+                "article_number": "Article - 107",
+                "partition_title": "Provisions as to introduction and passing of Bills.  "
               },
               {
-                "partition_title": "Article - 108. Joint sitting of both Houses in certain cases.  "
+                "article_number": "Article - 108",
+                "partition_title": "Joint sitting of both Houses in certain cases.  "
               },
               {
-                "partition_title": "Article - 109. Special procedure in respect of Money Bills.  "
+                "article_number": "Article - 109",
+                "partition_title": "Special procedure in respect of Money Bills.  "
               },
               {
-                "partition_title": "Article - 110. Definition of “Money Bills”.  "
+                "article_number": "Article - 110",
+                "partition_title": "Definition of “Money Bills”.  "
               },
               {
-                "partition_title": "Article - 111. Assent to Bills."
+                "article_number": "Article - 111",
+                "partition_title": "Assent to Bills."
               }
             ]
           },
           {
-            "partition_title": "*Procedure in Financial Matters* </p>",
+            "partition_title": "Procedure in Financial Matters",
             "sub_partitions": [
               {
-                "partition_title": "Article - 112. Annual financial statement.  "
+                "article_number": "Article - 112",
+                "partition_title": "Annual financial statement.  "
               },
               {
-                "partition_title": "Article - 113. Procedure in Parliament with respect to estimates.  "
+                "article_number": "Article - 113",
+                "partition_title": "Procedure in Parliament with respect to estimates.  "
               },
               {
-                "partition_title": "Article - 114. Appropriation Bills.  "
+                "article_number": "Article - 114",
+                "partition_title": "Appropriation Bills.  "
               },
               {
-                "partition_title": "Article - 115. Supplementary, additional or excess grants.  "
+                "article_number": "Article - 115",
+                "partition_title": "Supplementary, additional or excess grants.  "
               },
               {
-                "partition_title": "Article - 116. Votes on account, votes of credit and exceptional grants.  "
+                "article_number": "Article - 116",
+                "partition_title": "Votes on account, votes of credit and exceptional grants.  "
               },
               {
-                "partition_title": "Article - 117. Special provisions as to financial Bills."
+                "article_number": "Article - 117",
+                "partition_title": "Special provisions as to financial Bills."
               }
             ]
           },
           {
-            "partition_title": "*Procedure Generally* </p>",
+            "partition_title": "Procedure Generally",
             "sub_partitions": [
               {
-                "partition_title": "Article - 118. Rules of procedure. "
+                "article_number": "Article - 118",
+                "partition_title": "Rules of procedure. "
               },
               {
-                "partition_title": "Article - 119. Regulation by law of procedure in Parliament in relation to financial business.  "
+                "article_number": "Article - 119",
+                "partition_title": "Regulation by law of procedure in Parliament in relation to financial business.  "
               },
               {
-                "partition_title": "Article - 120. Language to be used in Parliament.  "
+                "article_number": "Article - 120",
+                "partition_title": "Language to be used in Parliament.  "
               },
               {
-                "partition_title": "Article - 121. Restriction on discussion in Parliament.  "
+                "article_number": "Article - 121",
+                "partition_title": "Restriction on discussion in Parliament.  "
               },
               {
-                "partition_title": "Article - 122. Courts not to inquire into proceedings of Parliament."
+                "article_number": "Article - 122",
+                "partition_title": "Courts not to inquire into proceedings of Parliament."
               }
             ]
           }
         ]
       },
       {
-        "partition_title": "Chapter III. LEGISLATIVE  POWERS OF THE PRESIDENT </p>",
+        "partition_title": "Chapter III. LEGISLATIVE  POWERS OF THE PRESIDENT",
         "sub_partitions": [
           {
-            "partition_title": "Article - 123. Power of President to promulgate Ordinances during recess of  Parliament.  "
+            "article_number": "Article - 123",
+            "partition_title": "Power of President to promulgate Ordinances during recess of  Parliament.  "
           }
         ]
       },
       {
-        "partition_title": "Chapter IV. THE UNION JUDICIARY </p>",
+        "partition_title": "Chapter IV. THE UNION JUDICIARY",
         "sub_partitions": [
           {
-            "partition_title": "Article - 124. Establishment and constitution of Supreme Court.  "
+            "article_number": "Article - 124",
+            "partition_title": "Establishment and constitution of Supreme Court.  "
           },
           {
-            "partition_title": "Article - 125. Salaries, etc., of Judges.  "
+            "article_number": "Article - 125",
+            "partition_title": "Salaries, etc., of Judges.  "
           },
           {
-            "partition_title": "Article - 126. Appointment of acting Chief Justice.  "
+            "article_number": "Article - 126",
+            "partition_title": "Appointment of acting Chief Justice.  "
           },
           {
-            "partition_title": "Article - 127. Appointment of adhoc judges.  "
+            "article_number": "Article - 127",
+            "partition_title": "Appointment of adhoc judges.  "
           },
           {
-            "partition_title": "Article - 128. Attendance of retired Judges at sittings of the Supreme Court."
+            "article_number": "Article - 128",
+            "partition_title": "Attendance of retired Judges at sittings of the Supreme Court."
           },
           {
-            "partition_title": "Article - 129. Supreme Court to be a court of record.130.Seat of Supreme Court.  "
+            "article_number": "Article - 129",
+            "partition_title": "Supreme Court to be a court of record.130.Seat of Supreme Court.  "
           },
           {
-            "partition_title": "Article - 131. Original jurisdiction of the Supreme Court.  "
+            "article_number": "Article - 131",
+            "partition_title": "Original jurisdiction of the Supreme Court.  "
           },
           {
-            "partition_title": "Article - 132. Appellate jurisdiction of Supreme Court in appeals from High Courts in certain cases.  "
+            "article_number": "Article - 132",
+            "partition_title": "Appellate jurisdiction of Supreme Court in appeals from High Courts in certain cases.  "
           },
           {
-            "partition_title": "Article - 133. Appellate jurisdiction of Supreme Court in appeals from High Courts in regard to civil matters.  "
+            "article_number": "Article - 133",
+            "partition_title": "Appellate jurisdiction of Supreme Court in appeals from High Courts in regard to civil matters.  "
           },
           {
-            "partition_title": "Article - 134. Appellate jurisdiction of Supreme Court in regard to criminal matters.134A.Certificate for appeal to the SupremeCourt.  "
+            "article_number": "Article - 134",
+            "partition_title": "Appellate jurisdiction of Supreme Court in regard to criminal matters.134A.Certificate for appeal to the SupremeCourt.  "
           },
           {
-            "partition_title": "Article - 135. Jurisdiction and powers of the Federal Court under existing law to be exercisable by the Supreme Court.  "
+            "article_number": "Article - 135",
+            "partition_title": "Jurisdiction and powers of the Federal Court under existing law to be exercisable by the Supreme Court.  "
           },
           {
-            "partition_title": "Article - 136. Special leave to appeal by the Supreme Court."
+            "article_number": "Article - 136",
+            "partition_title": "Special leave to appeal by the Supreme Court."
           },
           {
-            "partition_title": "Article - 137. Review of judgments or orders by the Supreme Court.  "
+            "article_number": "Article - 137",
+            "partition_title": "Review of judgments or orders by the Supreme Court.  "
           },
           {
-            "partition_title": "Article - 138. Enlargement of the jurisdiction of the Supreme Court.  "
+            "article_number": "Article - 138",
+            "partition_title": "Enlargement of the jurisdiction of the Supreme Court.  "
           },
           {
-            "partition_title": "Article - 139. Conferment on the Supreme Court of powers to issue certain writs.  "
+            "article_number": "Article - 139",
+            "partition_title": "Conferment on the Supreme Court of powers to issue certain writs.  "
           },
           {
-            "partition_title": "Article - 140. Ancillary powers of Supreme Court.  "
+            "article_number": "Article - 140",
+            "partition_title": "Ancillary powers of Supreme Court.  "
           },
           {
-            "partition_title": "Article - 141. Law declared by Supreme Court to be binding on all courts. "
+            "article_number": "Article - 141",
+            "partition_title": "Law declared by Supreme Court to be binding on all courts. "
           },
           {
-            "partition_title": "Article - 142. Enforcement of decrees and orders of Supreme Court and orders as to discovery, etc.  "
+            "article_number": "Article - 142",
+            "partition_title": "Enforcement of decrees and orders of Supreme Court and orders as to discovery, etc.  "
           },
           {
-            "partition_title": "Article - 143. Power of President to consult Supreme Court.  "
+            "article_number": "Article - 143",
+            "partition_title": "Power of President to consult Supreme Court.  "
           },
           {
-            "partition_title": "Article - 144. Civil and judicial authorities to act in aid of the Supreme Court.  "
+            "article_number": "Article - 144",
+            "partition_title": "Civil and judicial authorities to act in aid of the Supreme Court.  "
           },
           {
-            "partition_title": "Article - 145. Rules of Court, etc.  "
+            "article_number": "Article - 145",
+            "partition_title": "Rules of Court, etc.  "
           },
           {
-            "partition_title": "Article - 146. Officers and servants and the expenses of the Supreme Court.  "
+            "article_number": "Article - 146",
+            "partition_title": "Officers and servants and the expenses of the Supreme Court.  "
           },
           {
-            "partition_title": "Article - 147. Interpretation.  "
+            "article_number": "Article - 147",
+            "partition_title": "Interpretation.  "
           }
         ]
       },
       {
-        "partition_title": "Chapter V. COMPTROLLER AND AUDITOR-GENERAL OF INDIA </p>",
+        "partition_title": "Chapter V. COMPTROLLER AND AUDITOR-GENERAL OF INDIA",
         "sub_partitions": [
           {
-            "partition_title": "Article - 148. Comptroller and Auditor-General of India.149.Duties and powers of the Comptroller and Auditor-General.  "
+            "article_number": "Article - 148",
+            "partition_title": "Comptroller and Auditor-General of India.149.Duties and powers of the Comptroller and Auditor-General.  "
           },
           {
-            "partition_title": "Article - 150. Form of accounts of the Union and of the States.  "
+            "article_number": "Article - 150",
+            "partition_title": "Form of accounts of the Union and of the States.  "
           },
           {
-            "partition_title": "Article - 151. Audit reports.  "
+            "article_number": "Article - 151",
+            "partition_title": "Audit reports.  "
           }
         ]
       }
@@ -594,347 +742,431 @@
   },
   {
     "partition_number": "Part VI",
-    "partition_title": "#### <p align=\"center\"> CHAPTER I. GENERAL </p>",
+    "partition_title": "CHAPTER I. GENERAL",
     "sub_partitions": [
       {
-        "partition_title": "Chapter I. GENERAL </p>",
+        "partition_title": "Chapter I. GENERAL",
         "sub_partitions": [
           {
-            "partition_title": "Article - 152. Definition."
+            "article_number": "Article - 152",
+            "partition_title": "Definition."
           }
         ]
       },
       {
-        "partition_title": "Chapter II. THE EXECUTIVE  </p>",
+        "partition_title": "Chapter II. THE EXECUTIVE",
         "sub_partitions": [
           {
-            "partition_title": "*The Governor* </p>",
+            "partition_title": "The Governor",
             "sub_partitions": [
               {
-                "partition_title": "Article - 153. Governors of States.  "
+                "article_number": "Article - 153",
+                "partition_title": "Governors of States.  "
               },
               {
-                "partition_title": "Article - 154. Executive power of State.  "
+                "article_number": "Article - 154",
+                "partition_title": "Executive power of State.  "
               },
               {
-                "partition_title": "Article - 155. Appointment of Governor.  "
+                "article_number": "Article - 155",
+                "partition_title": "Appointment of Governor.  "
               },
               {
-                "partition_title": "Article - 156. Term of office of Governor.  "
+                "article_number": "Article - 156",
+                "partition_title": "Term of office of Governor.  "
               },
               {
-                "partition_title": "Article - 157. Qualifications for appointment as Governor.  "
+                "article_number": "Article - 157",
+                "partition_title": "Qualifications for appointment as Governor.  "
               },
               {
-                "partition_title": "Article - 158. Conditions of Governor’s office.  "
+                "article_number": "Article - 158",
+                "partition_title": "Conditions of Governor’s office.  "
               },
               {
-                "partition_title": "Article - 159. Oath or affirmation by the Governor.  "
+                "article_number": "Article - 159",
+                "partition_title": "Oath or affirmation by the Governor.  "
               },
               {
-                "partition_title": "Article - 160. Discharge of the functions of the Governor in certain contingencies.  "
+                "article_number": "Article - 160",
+                "partition_title": "Discharge of the functions of the Governor in certain contingencies.  "
               },
               {
-                "partition_title": "Article - 161. Power of Governor to grant pardons, etc.,and to suspend, remit or commute sentences in certain cases.  "
+                "article_number": "Article - 161",
+                "partition_title": "Power of Governor to grant pardons, etc.,and to suspend, remit or commute sentences in certain cases.  "
               },
               {
-                "partition_title": "Article - 162. Extent of executive power of State.  "
+                "article_number": "Article - 162",
+                "partition_title": "Extent of executive power of State.  "
               }
             ]
           },
           {
-            "partition_title": "*Council of Ministers* </p>",
+            "partition_title": "Council of Ministers",
             "sub_partitions": [
               {
-                "partition_title": "Article - 163. Council of Ministers to aid and advise Governor.  "
+                "article_number": "Article - 163",
+                "partition_title": "Council of Ministers to aid and advise Governor.  "
               },
               {
-                "partition_title": "Article - 164. Other provisions as to Ministers.  "
+                "article_number": "Article - 164",
+                "partition_title": "Other provisions as to Ministers.  "
               }
             ]
           },
           {
-            "partition_title": "*The Advocate-General for the State* </p>",
+            "partition_title": "The Advocate-General for the State",
             "sub_partitions": [
               {
-                "partition_title": "Article - 165. Advocate-General for the State.  "
+                "article_number": "Article - 165",
+                "partition_title": "Advocate-General for the State.  "
               }
             ]
           },
           {
-            "partition_title": "*Conduct of Government Business* </p>",
+            "partition_title": "Conduct of Government Business",
             "sub_partitions": [
               {
-                "partition_title": "Article - 166. Conduct of business of the Government of a State.  "
+                "article_number": "Article - 166",
+                "partition_title": "Conduct of business of the Government of a State.  "
               },
               {
-                "partition_title": "Article - 167. Duties of Chief Minister as respects the furnishing of information to Governor, etc.  "
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "partition_title": "Chapter III. THE STATE LEGISLATURE  </p>",
-        "sub_partitions": [
-          {
-            "partition_title": "*General* </p>",
-            "sub_partitions": [
-              {
-                "partition_title": "Article - 168. Constitution of Legislatures in States.  "
-              },
-              {
-                "partition_title": "Article - 169. Abolitionor creation of Legislative Councils in States.  "
-              },
-              {
-                "partition_title": "Article - 170. Composition of the Legislative Assemblies.  "
-              },
-              {
-                "partition_title": "Article - 171. Composition of the Legislative Councils.  "
-              },
-              {
-                "partition_title": "Article - 172. Duration of State Legislatures.  "
-              },
-              {
-                "partition_title": "Article - 173. Qualification for membership of the State Legislature.  "
-              },
-              {
-                "partition_title": "Article - 174. Sessions of the State Legislature, prorogation and dissolution.  "
-              },
-              {
-                "partition_title": "Article - 175. Right of Governor to address and send messages to the House or Houses.  "
-              },
-              {
-                "partition_title": "Article - 176. Special address by the Governor.  "
-              },
-              {
-                "partition_title": "Article - 177. Rights of Ministers and Advocate-General as respects the Houses."
-              }
-            ]
-          },
-          {
-            "partition_title": "*Officers of the State Legislature* </p>",
-            "sub_partitions": [
-              {
-                "partition_title": "Article - 178. The Speaker and Deputy Speaker of the Legislative Assembly.  "
-              },
-              {
-                "partition_title": "Article - 179. Vacation and resignation of, and removal from, the offices of Speaker  and Deputy Speaker.  "
-              },
-              {
-                "partition_title": "Article - 180. Power of the Deputy Speaker or other person to perform the duties of the office of, or to act as, Speaker.  "
-              },
-              {
-                "partition_title": "Article - 181. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration.  "
-              },
-              {
-                "partition_title": "Article - 182. The Chairman and Deputy Chairman of the Legislative Council.  "
-              },
-              {
-                "partition_title": "Article - 183. Vacation and resignation of, and removal from, the offices of Chairman and Deputy Chairman.  "
-              },
-              {
-                "partition_title": "Article - 184. Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman.  "
-              },
-              {
-                "partition_title": "Article - 185. The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under consideration.  "
-              },
-              {
-                "partition_title": "Article - 186. Salaries  and  allowances  of  the  Speaker  and  Deputy  Speaker  and  the  Chairman  and  Deputy Chairman.  "
-              },
-              {
-                "partition_title": "Article - 187. Secretariat of State Legislature.  "
-              }
-            ]
-          },
-          {
-            "partition_title": "*Conduct of Business* </p>",
-            "sub_partitions": [
-              {
-                "partition_title": "Article - 188. Oath or affirmation by members.  "
-              },
-              {
-                "partition_title": "Article - 189. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum.  "
-              }
-            ]
-          },
-          {
-            "partition_title": "*Disqualifications of Members* </p>",
-            "sub_partitions": [
-              {
-                "partition_title": "Article - 190. Vacation of seats.  "
-              },
-              {
-                "partition_title": "Article - 191. Disqualifications for membership.  "
-              },
-              {
-                "partition_title": "Article - 192. Decision on questions as to disqualifications of members.  "
-              },
-              {
-                "partition_title": "Article - 193. Penalty  for  sitting  and  voting  before  making  oath  or  affirmation  under  article  188  or  when  not qualified or when disqualified."
-              }
-            ]
-          },
-          {
-            "partition_title": "*Powers, privileges and immunities of State Legislatures and their Members* </p>",
-            "sub_partitions": [
-              {
-                "partition_title": "Article - 194. Powers, privileges, etc., of the Houses of Legislatures and of the members and committees thereof.  "
-              },
-              {
-                "partition_title": "Article - 195. Salaries and allowances of members."
-              }
-            ]
-          },
-          {
-            "partition_title": "*Legislative Procedure* </p>",
-            "sub_partitions": [
-              {
-                "partition_title": "Article - 196. Provisions as to introduction and passing of Bills.  "
-              },
-              {
-                "partition_title": "Article - 197. Restriction on powers of Legislative Council as to Bills other than Money Bills.  "
-              },
-              {
-                "partition_title": "Article - 198. Special procedure in respect of Money Bills.  "
-              },
-              {
-                "partition_title": "Article - 199. Definition of “Money Bills”.  "
-              },
-              {
-                "partition_title": "Article - 200. Assent to Bills.  "
-              },
-              {
-                "partition_title": "Article - 201. Bills reserved for consideration."
-              }
-            ]
-          },
-          {
-            "partition_title": "*Procedure in Financial Matters* </p>",
-            "sub_partitions": [
-              {
-                "partition_title": "Article - 202. Annual financial statement.  "
-              },
-              {
-                "partition_title": "Article - 203. Procedure in Legislature with respect to estimates.  "
-              },
-              {
-                "partition_title": "Article - 204. Appropriation Bills.205.Supplementary, additional or excess grants.  "
-              },
-              {
-                "partition_title": "Article - 206. Votes on account, votes of credit and exceptional grants.  "
-              },
-              {
-                "partition_title": "Article - 207. Special provisions as to financial Bills."
-              }
-            ]
-          },
-          {
-            "partition_title": "*Procedure Generally* </p>",
-            "sub_partitions": [
-              {
-                "partition_title": "Article - 208. Rules of procedure.  "
-              },
-              {
-                "partition_title": "Article - 209. Regulation by law of procedure in the Legislature of the State in relation to financial business.  "
-              },
-              {
-                "partition_title": "Article - 210. Language to be used in the Legislature.  "
-              },
-              {
-                "partition_title": "Article - 211. Restriction on discussion in the Legislature.  "
-              },
-              {
-                "partition_title": "Article - 212. Courts not to inquire into proceedings of the Legislature."
+                "article_number": "Article - 167",
+                "partition_title": "Duties of Chief Minister as respects the furnishing of information to Governor, etc.  "
               }
             ]
           }
         ]
       },
       {
-        "partition_title": "Chapter IV. LEGISLATIVE  POWER OF THE GOVERNOR  </p>",
+        "partition_title": "Chapter III. THE STATE LEGISLATURE",
         "sub_partitions": [
           {
-            "partition_title": "Article - 213. Power of Governor to promulgate Ordinances during recess of Legislature."
+            "partition_title": "General",
+            "sub_partitions": [
+              {
+                "article_number": "Article - 168",
+                "partition_title": "Constitution of Legislatures in States.  "
+              },
+              {
+                "article_number": "Article - 169",
+                "partition_title": "Abolitionor creation of Legislative Councils in States.  "
+              },
+              {
+                "article_number": "Article - 170",
+                "partition_title": "Composition of the Legislative Assemblies.  "
+              },
+              {
+                "article_number": "Article - 171",
+                "partition_title": "Composition of the Legislative Councils.  "
+              },
+              {
+                "article_number": "Article - 172",
+                "partition_title": "Duration of State Legislatures.  "
+              },
+              {
+                "article_number": "Article - 173",
+                "partition_title": "Qualification for membership of the State Legislature.  "
+              },
+              {
+                "article_number": "Article - 174",
+                "partition_title": "Sessions of the State Legislature, prorogation and dissolution.  "
+              },
+              {
+                "article_number": "Article - 175",
+                "partition_title": "Right of Governor to address and send messages to the House or Houses.  "
+              },
+              {
+                "article_number": "Article - 176",
+                "partition_title": "Special address by the Governor.  "
+              },
+              {
+                "article_number": "Article - 177",
+                "partition_title": "Rights of Ministers and Advocate-General as respects the Houses."
+              }
+            ]
+          },
+          {
+            "partition_title": "Officers of the State Legislature",
+            "sub_partitions": [
+              {
+                "article_number": "Article - 178",
+                "partition_title": "The Speaker and Deputy Speaker of the Legislative Assembly.  "
+              },
+              {
+                "article_number": "Article - 179",
+                "partition_title": "Vacation and resignation of, and removal from, the offices of Speaker  and Deputy Speaker.  "
+              },
+              {
+                "article_number": "Article - 180",
+                "partition_title": "Power of the Deputy Speaker or other person to perform the duties of the office of, or to act as, Speaker.  "
+              },
+              {
+                "article_number": "Article - 181",
+                "partition_title": "The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration.  "
+              },
+              {
+                "article_number": "Article - 182",
+                "partition_title": "The Chairman and Deputy Chairman of the Legislative Council.  "
+              },
+              {
+                "article_number": "Article - 183",
+                "partition_title": "Vacation and resignation of, and removal from, the offices of Chairman and Deputy Chairman.  "
+              },
+              {
+                "article_number": "Article - 184",
+                "partition_title": "Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman.  "
+              },
+              {
+                "article_number": "Article - 185",
+                "partition_title": "The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under consideration.  "
+              },
+              {
+                "article_number": "Article - 186",
+                "partition_title": "Salaries  and  allowances  of  the  Speaker  and  Deputy  Speaker  and  the  Chairman  and  Deputy Chairman.  "
+              },
+              {
+                "article_number": "Article - 187",
+                "partition_title": "Secretariat of State Legislature.  "
+              }
+            ]
+          },
+          {
+            "partition_title": "Conduct of Business",
+            "sub_partitions": [
+              {
+                "article_number": "Article - 188",
+                "partition_title": "Oath or affirmation by members.  "
+              },
+              {
+                "article_number": "Article - 189",
+                "partition_title": "Voting in Houses, power of Houses to act notwithstanding vacancies and quorum.  "
+              }
+            ]
+          },
+          {
+            "partition_title": "Disqualifications of Members",
+            "sub_partitions": [
+              {
+                "article_number": "Article - 190",
+                "partition_title": "Vacation of seats.  "
+              },
+              {
+                "article_number": "Article - 191",
+                "partition_title": "Disqualifications for membership.  "
+              },
+              {
+                "article_number": "Article - 192",
+                "partition_title": "Decision on questions as to disqualifications of members.  "
+              },
+              {
+                "article_number": "Article - 193",
+                "partition_title": "Penalty  for  sitting  and  voting  before  making  oath  or  affirmation  under  article  188  or  when  not qualified or when disqualified."
+              }
+            ]
+          },
+          {
+            "partition_title": "Powers, privileges and immunities of State Legislatures and their Members",
+            "sub_partitions": [
+              {
+                "article_number": "Article - 194",
+                "partition_title": "Powers, privileges, etc., of the Houses of Legislatures and of the members and committees thereof.  "
+              },
+              {
+                "article_number": "Article - 195",
+                "partition_title": "Salaries and allowances of members."
+              }
+            ]
+          },
+          {
+            "partition_title": "Legislative Procedure",
+            "sub_partitions": [
+              {
+                "article_number": "Article - 196",
+                "partition_title": "Provisions as to introduction and passing of Bills.  "
+              },
+              {
+                "article_number": "Article - 197",
+                "partition_title": "Restriction on powers of Legislative Council as to Bills other than Money Bills.  "
+              },
+              {
+                "article_number": "Article - 198",
+                "partition_title": "Special procedure in respect of Money Bills.  "
+              },
+              {
+                "article_number": "Article - 199",
+                "partition_title": "Definition of “Money Bills”.  "
+              },
+              {
+                "article_number": "Article - 200",
+                "partition_title": "Assent to Bills.  "
+              },
+              {
+                "article_number": "Article - 201",
+                "partition_title": "Bills reserved for consideration."
+              }
+            ]
+          },
+          {
+            "partition_title": "Procedure in Financial Matters",
+            "sub_partitions": [
+              {
+                "article_number": "Article - 202",
+                "partition_title": "Annual financial statement.  "
+              },
+              {
+                "article_number": "Article - 203",
+                "partition_title": "Procedure in Legislature with respect to estimates.  "
+              },
+              {
+                "article_number": "Article - 204",
+                "partition_title": "Appropriation Bills.205.Supplementary, additional or excess grants.  "
+              },
+              {
+                "article_number": "Article - 206",
+                "partition_title": "Votes on account, votes of credit and exceptional grants.  "
+              },
+              {
+                "article_number": "Article - 207",
+                "partition_title": "Special provisions as to financial Bills."
+              }
+            ]
+          },
+          {
+            "partition_title": "Procedure Generally",
+            "sub_partitions": [
+              {
+                "article_number": "Article - 208",
+                "partition_title": "Rules of procedure.  "
+              },
+              {
+                "article_number": "Article - 209",
+                "partition_title": "Regulation by law of procedure in the Legislature of the State in relation to financial business.  "
+              },
+              {
+                "article_number": "Article - 210",
+                "partition_title": "Language to be used in the Legislature.  "
+              },
+              {
+                "article_number": "Article - 211",
+                "partition_title": "Restriction on discussion in the Legislature.  "
+              },
+              {
+                "article_number": "Article - 212",
+                "partition_title": "Courts not to inquire into proceedings of the Legislature."
+              }
+            ]
           }
         ]
       },
       {
-        "partition_title": "Chapter V. THE  HIGH COURTS IN THE STATES  </p>",
+        "partition_title": "Chapter IV. LEGISLATIVE  POWER OF THE GOVERNOR",
         "sub_partitions": [
           {
-            "partition_title": "Article - 214. High Courts for States.  "
-          },
-          {
-            "partition_title": "Article - 215. High Courts to be courts of record.  "
-          },
-          {
-            "partition_title": "Article - 216. Constitution of High Courts."
-          },
-          {
-            "partition_title": "Article - 217. Appointment and conditions of the office of a Judge of a High Court.  "
-          },
-          {
-            "partition_title": "Article - 218. Application of certain provisions relating to Supreme Court to High Courts.  "
-          },
-          {
-            "partition_title": "Article - 219. Oath or affirmation by Judges of High Courts.  "
-          },
-          {
-            "partition_title": "Article - 220. Restriction on practice after being a permanent Judge.  "
-          },
-          {
-            "partition_title": "Article - 221. Salaries, etc., of Judges.  "
-          },
-          {
-            "partition_title": "Article - 222. Transfer of a Judge from one High Court to another.  "
-          },
-          {
-            "partition_title": "Article - 223. Appointment of acting Chief Justice.   "
-          },
-          {
-            "partition_title": "Article - 224. Appointment of additional and acting Judges.  "
-          },
-          {
-            "partition_title": "Article - 225. Jurisdiction of existing High Courts.  "
-          },
-          {
-            "partition_title": "Article - 226. Power of High Courts to issue certain writs.  "
-          },
-          {
-            "partition_title": "Article - 227. Power of superintendence over all courts by the High Court.  "
-          },
-          {
-            "partition_title": "Article - 228. Transfer of certain cases to High Court.  "
-          },
-          {
-            "partition_title": "Article - 229. Officers and servants and the expenses of High Courts.  "
-          },
-          {
-            "partition_title": "Article - 230. Extension of jurisdiction of High Courts to Union territories.  "
-          },
-          {
-            "partition_title": "Article - 231. Establishment of a common High Court for two or more States.  "
+            "article_number": "Article - 213",
+            "partition_title": "Power of Governor to promulgate Ordinances during recess of Legislature."
           }
         ]
       },
       {
-        "partition_title": "Chapter VI. #### <p align=\"center\"> CHAPTER VI SUBORDINATE COURTS  </p>",
+        "partition_title": "Chapter V. THE  HIGH COURTS IN THE STATES",
         "sub_partitions": [
           {
-            "partition_title": "Article - 233. Appointment of district judges.  "
+            "article_number": "Article - 214",
+            "partition_title": "High Courts for States.  "
           },
           {
-            "partition_title": "Article - 234. Recruitment of persons other than district judges to the judicial service.235.Control over subordinate courts.  "
+            "article_number": "Article - 215",
+            "partition_title": "High Courts to be courts of record.  "
           },
           {
-            "partition_title": "Article - 236. Interpretation.  "
+            "article_number": "Article - 216",
+            "partition_title": "Constitution of High Courts."
           },
           {
-            "partition_title": "Article - 237. Application of the provisions of this Chapter to certain class or classes of magistrates.  "
+            "article_number": "Article - 217",
+            "partition_title": "Appointment and conditions of the office of a Judge of a High Court.  "
           },
           {
-            "partition_title": "Article - 238. [Omitted.]  "
+            "article_number": "Article - 218",
+            "partition_title": "Application of certain provisions relating to Supreme Court to High Courts.  "
+          },
+          {
+            "article_number": "Article - 219",
+            "partition_title": "Oath or affirmation by Judges of High Courts.  "
+          },
+          {
+            "article_number": "Article - 220",
+            "partition_title": "Restriction on practice after being a permanent Judge.  "
+          },
+          {
+            "article_number": "Article - 221",
+            "partition_title": "Salaries, etc., of Judges.  "
+          },
+          {
+            "article_number": "Article - 222",
+            "partition_title": "Transfer of a Judge from one High Court to another.  "
+          },
+          {
+            "article_number": "Article - 223",
+            "partition_title": "Appointment of acting Chief Justice.   "
+          },
+          {
+            "article_number": "Article - 224",
+            "partition_title": "Appointment of additional and acting Judges.  "
+          },
+          {
+            "article_number": "Article - 225",
+            "partition_title": "Jurisdiction of existing High Courts.  "
+          },
+          {
+            "article_number": "Article - 226",
+            "partition_title": "Power of High Courts to issue certain writs.  "
+          },
+          {
+            "article_number": "Article - 227",
+            "partition_title": "Power of superintendence over all courts by the High Court.  "
+          },
+          {
+            "article_number": "Article - 228",
+            "partition_title": "Transfer of certain cases to High Court.  "
+          },
+          {
+            "article_number": "Article - 229",
+            "partition_title": "Officers and servants and the expenses of High Courts.  "
+          },
+          {
+            "article_number": "Article - 230",
+            "partition_title": "Extension of jurisdiction of High Courts to Union territories.  "
+          },
+          {
+            "article_number": "Article - 231",
+            "partition_title": "Establishment of a common High Court for two or more States.  "
+          }
+        ]
+      },
+      {
+        "partition_title": "Chapter VI. CHAPTER VI SUBORDINATE COURTS",
+        "sub_partitions": [
+          {
+            "article_number": "Article - 233",
+            "partition_title": "Appointment of district judges.  "
+          },
+          {
+            "article_number": "Article - 234",
+            "partition_title": "Recruitment of persons other than district judges to the judicial service.235.Control over subordinate courts.  "
+          },
+          {
+            "article_number": "Article - 236",
+            "partition_title": "Interpretation.  "
+          },
+          {
+            "article_number": "Article - 237",
+            "partition_title": "Application of the provisions of this Chapter to certain class or classes of magistrates.  "
+          },
+          {
+            "article_number": "Article - 238",
+            "partition_title": "[Omitted.]  "
           }
         ]
       }
@@ -942,39 +1174,44 @@
   },
   {
     "partition_number": "Part VIII",
-    "partition_title": "#### <p align=\"center\"> THE UNION TERRITORIES </p>",
+    "partition_title": "THE UNION TERRITORIES",
     "sub_partitions": [
       {
-        "partition_title": "Article - 239. Administration of Union territories.  "
+        "article_number": "Article - 239",
+        "partition_title": "Administration of Union territories.  "
       },
       {
-        "partition_title": "Article - 240. Power of President to make regulations for certain Union territories.  "
+        "article_number": "Article - 240",
+        "partition_title": "Power of President to make regulations for certain Union territories.  "
       },
       {
-        "partition_title": "Article - 241. High Courts for Union territories.  "
+        "article_number": "Article - 241",
+        "partition_title": "High Courts for Union territories.  "
       },
       {
-        "partition_title": "Article - 242. [Omitted.]  "
+        "article_number": "Article - 242",
+        "partition_title": "[Omitted.]  "
       }
     ]
   },
   {
     "partition_number": "Part IX",
-    "partition_title": "#### <p align=\"center\"> THE PANCHAYATS </p>",
+    "partition_title": "THE PANCHAYATS",
     "sub_partitions": [
       {
-        "partition_title": "Article - 243. Definitions.  "
+        "article_number": "Article - 243",
+        "partition_title": "Definitions.  "
       }
     ]
   },
   {
     "partition_number": "Part IX",
-    "partition_title": "#### <p align=\"center\"> THE MUNICIPALITIES </p>",
+    "partition_title": "THE MUNICIPALITIES",
     "sub_partitions": []
   },
   {
     "partition_number": "Part IX",
-    "partition_title": "#### <p align=\"center\"> THE CO-OPERATIVE SOCIETIES </p>",
+    "partition_title": "THE CO-OPERATIVE SOCIETIES",
     "sub_partitions": []
   },
   {
@@ -982,86 +1219,106 @@
     "partition_title": "244. Administration of Scheduled Areas and Tribal Areas.",
     "sub_partitions": [
       {
-        "partition_title": "Article - 244. Administration of Scheduled Areas and Tribal Areas.  "
+        "article_number": "Article - 244",
+        "partition_title": "Administration of Scheduled Areas and Tribal Areas.  "
       }
     ]
   },
   {
     "partition_number": "Part XI",
-    "partition_title": "#### <p align=\"center\"> RELATIONS BETWEEN THE UNION AND THE STATES </p>",
+    "partition_title": "RELATIONS BETWEEN THE UNION AND THE STATES",
     "sub_partitions": [
       {
-        "partition_title": "Chapter I. LEGISLATIVE  RELATIONS  </p>",
+        "partition_title": "Chapter I. LEGISLATIVE  RELATIONS",
         "sub_partitions": [
           {
-            "partition_title": "*Distribution of Legislative Powers* </p>",
+            "partition_title": "Distribution of Legislative Powers",
             "sub_partitions": [
               {
-                "partition_title": "Article - 245. Extent of laws made by Parliament and by the Legislatures of States.  "
+                "article_number": "Article - 245",
+                "partition_title": "Extent of laws made by Parliament and by the Legislatures of States.  "
               },
               {
-                "partition_title": "Article - 246. Subject-matter of laws made by Parliament and by the Legislatures of States.  "
+                "article_number": "Article - 246",
+                "partition_title": "Subject-matter of laws made by Parliament and by the Legislatures of States.  "
               },
               {
-                "partition_title": "Article - 247. Power of Parliament to provide for the establishment of certain additional courts.  "
+                "article_number": "Article - 247",
+                "partition_title": "Power of Parliament to provide for the establishment of certain additional courts.  "
               },
               {
-                "partition_title": "Article - 248. Residuary powers of legislation.  "
+                "article_number": "Article - 248",
+                "partition_title": "Residuary powers of legislation.  "
               },
               {
-                "partition_title": "Article - 249. Power of Parliament to legislate with respect to a matter in the State List in the national interest.  "
+                "article_number": "Article - 249",
+                "partition_title": "Power of Parliament to legislate with respect to a matter in the State List in the national interest.  "
               },
               {
-                "partition_title": "Article - 250. Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in operation."
+                "article_number": "Article - 250",
+                "partition_title": "Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in operation."
               },
               {
-                "partition_title": "Article - 251. Inconsistency between laws made by Parliament under articles 249 and 250 and laws made by the Legislatures of States.  "
+                "article_number": "Article - 251",
+                "partition_title": "Inconsistency between laws made by Parliament under articles 249 and 250 and laws made by the Legislatures of States.  "
               },
               {
-                "partition_title": "Article - 252. Power of Parliament to legislate for two or more States by consent and adoption of such legislation by any other State.  "
+                "article_number": "Article - 252",
+                "partition_title": "Power of Parliament to legislate for two or more States by consent and adoption of such legislation by any other State.  "
               },
               {
-                "partition_title": "Article - 253. Legislation for giving effect to international agreements.  "
+                "article_number": "Article - 253",
+                "partition_title": "Legislation for giving effect to international agreements.  "
               },
               {
-                "partition_title": "Article - 254. Inconsistency between lawsmade by Parliament and laws made by the Legislatures of States.  "
+                "article_number": "Article - 254",
+                "partition_title": "Inconsistency between lawsmade by Parliament and laws made by the Legislatures of States.  "
               },
               {
-                "partition_title": "Article - 255. Requirements as to recommendations and previous sanctions to be regarded as matters of procedure only."
+                "article_number": "Article - 255",
+                "partition_title": "Requirements as to recommendations and previous sanctions to be regarded as matters of procedure only."
               }
             ]
           }
         ]
       },
       {
-        "partition_title": "Chapter II. ADMINISTRATIVE RELATIONS </p>",
+        "partition_title": "Chapter II. ADMINISTRATIVE RELATIONS",
         "sub_partitions": [
           {
-            "partition_title": "*General* </p>",
+            "partition_title": "General",
             "sub_partitions": [
               {
-                "partition_title": "Article - 256. Obligation of States and the Union.  "
+                "article_number": "Article - 256",
+                "partition_title": "Obligation of States and the Union.  "
               },
               {
-                "partition_title": "Article - 257. Control of the Union over States in certain cases."
+                "article_number": "Article - 257",
+                "partition_title": "Control of the Union over States in certain cases."
               },
               {
-                "partition_title": "Article - 258. Power of the Union to confer powers, etc., on States in certain cases.  "
+                "article_number": "Article - 258",
+                "partition_title": "Power of the Union to confer powers, etc., on States in certain cases.  "
               },
               {
-                "partition_title": "Article - 259. [Omitted.]  "
+                "article_number": "Article - 259",
+                "partition_title": "[Omitted.]  "
               },
               {
-                "partition_title": "Article - 260. Jurisdiction of the Union in relation to territories outside India.  "
+                "article_number": "Article - 260",
+                "partition_title": "Jurisdiction of the Union in relation to territories outside India.  "
               },
               {
-                "partition_title": "Article - 261. Public acts, records and judicial proceedings.Disputes relating to Waters  "
+                "article_number": "Article - 261",
+                "partition_title": "Public acts, records and judicial proceedings.Disputes relating to Waters  "
               },
               {
-                "partition_title": "Article - 262. Adjudication of disputes relating to waters of  inter-State rivers or river valleys.Co-ordination between States  "
+                "article_number": "Article - 262",
+                "partition_title": "Adjudication of disputes relating to waters of  inter-State rivers or river valleys.Co-ordination between States  "
               },
               {
-                "partition_title": "Article - 263. Provisions with respect to an inter-State Council. "
+                "article_number": "Article - 263",
+                "partition_title": "Provisions with respect to an inter-State Council. "
               }
             ]
           }
@@ -1071,225 +1328,283 @@
   },
   {
     "partition_number": "Part XII",
-    "partition_title": "#### <p align=\"center\"> CHAPTER I. FINANCE </p>",
+    "partition_title": "CHAPTER I. FINANCE",
     "sub_partitions": [
       {
-        "partition_title": "Chapter I. FINANCE </p>",
+        "partition_title": "Chapter I. FINANCE",
         "sub_partitions": [
           {
-            "partition_title": "*General* </p>",
+            "partition_title": "General",
             "sub_partitions": [
               {
-                "partition_title": "Article - 264. Interpretation.  "
+                "article_number": "Article - 264",
+                "partition_title": "Interpretation.  "
               },
               {
-                "partition_title": "Article - 265. Taxes not to be imposed save by authority of law.  "
+                "article_number": "Article - 265",
+                "partition_title": "Taxes not to be imposed save by authority of law.  "
               },
               {
-                "partition_title": "Article - 266. Consolidated Funds and publicaccounts of India and of the States.  "
+                "article_number": "Article - 266",
+                "partition_title": "Consolidated Funds and publicaccounts of India and of the States.  "
               },
               {
-                "partition_title": "Article - 267. Contingency Fund.Distribution of Revenues between the Union and the States  "
+                "article_number": "Article - 267",
+                "partition_title": "Contingency Fund.Distribution of Revenues between the Union and the States  "
               },
               {
-                "partition_title": "Article - 268. Duties levied by the Union but collected and appropriated by the State.  "
+                "article_number": "Article - 268",
+                "partition_title": "Duties levied by the Union but collected and appropriated by the State.  "
               },
               {
-                "partition_title": "Article - 269. Taxes levied and collected by the Unionbut assigned to the States.  "
+                "article_number": "Article - 269",
+                "partition_title": "Taxes levied and collected by the Unionbut assigned to the States.  "
               },
               {
-                "partition_title": "Article - 270. Taxes levied and  distributed between the Union and the States.  "
+                "article_number": "Article - 270",
+                "partition_title": "Taxes levied and  distributed between the Union and the States.  "
               },
               {
-                "partition_title": "Article - 271. Surcharge on certain duties and taxes for purposes of the Union.  "
+                "article_number": "Article - 271",
+                "partition_title": "Surcharge on certain duties and taxes for purposes of the Union.  "
               },
               {
-                "partition_title": "Article - 272. [Omitted.]  "
+                "article_number": "Article - 272",
+                "partition_title": "[Omitted.]  "
               },
               {
-                "partition_title": "Article - 273. Grants in lieu of export duty on jute and jute products.  "
+                "article_number": "Article - 273",
+                "partition_title": "Grants in lieu of export duty on jute and jute products.  "
               },
               {
-                "partition_title": "Article - 274. Prior  recommendation  of  President  required  to  Bills affecting taxation in which States are interested.  "
+                "article_number": "Article - 274",
+                "partition_title": "Prior  recommendation  of  President  required  to  Bills affecting taxation in which States are interested.  "
               },
               {
-                "partition_title": "Article - 275. Grants from the Union to certain States.  "
+                "article_number": "Article - 275",
+                "partition_title": "Grants from the Union to certain States.  "
               },
               {
-                "partition_title": "Article - 276. Taxes on professions, trades, callings and employments.  "
+                "article_number": "Article - 276",
+                "partition_title": "Taxes on professions, trades, callings and employments.  "
               },
               {
-                "partition_title": "Article - 277. Savings.  "
+                "article_number": "Article - 277",
+                "partition_title": "Savings.  "
               },
               {
-                "partition_title": "Article - 278. [Omitted.]  "
+                "article_number": "Article - 278",
+                "partition_title": "[Omitted.]  "
               },
               {
-                "partition_title": "Article - 279. Calculation of “net proceeds”, etc.  "
+                "article_number": "Article - 279",
+                "partition_title": "Calculation of “net proceeds”, etc.  "
               },
               {
-                "partition_title": "Article - 280. Finance Commission.  "
+                "article_number": "Article - 280",
+                "partition_title": "Finance Commission.  "
               },
               {
-                "partition_title": "Article - 281. Recommendations of the Finance Commission.Miscellaneous financial provisions  "
+                "article_number": "Article - 281",
+                "partition_title": "Recommendations of the Finance Commission.Miscellaneous financial provisions  "
               },
               {
-                "partition_title": "Article - 282. Expenditure defrayable by the Union or a State out of its revenues."
+                "article_number": "Article - 282",
+                "partition_title": "Expenditure defrayable by the Union or a State out of its revenues."
               },
               {
-                "partition_title": "Article - 283. Custody,  etc.,  of  Consolidated  Funds, Contingency  Funds  and  moneys  credited  to  the  public accounts.  "
+                "article_number": "Article - 283",
+                "partition_title": "Custody,  etc.,  of  Consolidated  Funds, Contingency  Funds  and  moneys  credited  to  the  public accounts.  "
               },
               {
-                "partition_title": "Article - 284. Custody of suitors’ deposits and other moneys received by public servants and courts.  "
+                "article_number": "Article - 284",
+                "partition_title": "Custody of suitors’ deposits and other moneys received by public servants and courts.  "
               },
               {
-                "partition_title": "Article - 285. Exemption of property of the Union from State taxation.  "
+                "article_number": "Article - 285",
+                "partition_title": "Exemption of property of the Union from State taxation.  "
               },
               {
-                "partition_title": "Article - 286. Restrictions as to imposition of taxon the sale or purchase of goods.  "
+                "article_number": "Article - 286",
+                "partition_title": "Restrictions as to imposition of taxon the sale or purchase of goods.  "
               },
               {
-                "partition_title": "Article - 287. Exemption from taxes on electricity.  "
+                "article_number": "Article - 287",
+                "partition_title": "Exemption from taxes on electricity.  "
               },
               {
-                "partition_title": "Article - 288. Exemption from taxation by States in respect of water or electricity in certain cases.  "
+                "article_number": "Article - 288",
+                "partition_title": "Exemption from taxation by States in respect of water or electricity in certain cases.  "
               },
               {
-                "partition_title": "Article - 289. Exemption of property and income of a State from Union taxation.  "
+                "article_number": "Article - 289",
+                "partition_title": "Exemption of property and income of a State from Union taxation.  "
               },
               {
-                "partition_title": "Article - 290. Adjustment in respect of certain expenses and pensions.  "
+                "article_number": "Article - 290",
+                "partition_title": "Adjustment in respect of certain expenses and pensions.  "
               },
               {
-                "partition_title": "Article - 291. [Omitted.]"
+                "article_number": "Article - 291",
+                "partition_title": "[Omitted.]"
               }
             ]
           }
         ]
       },
       {
-        "partition_title": "Chapter II. BORROWING  </p>",
+        "partition_title": "Chapter II. BORROWING",
         "sub_partitions": [
           {
-            "partition_title": "Article - 292. Borrowing by the Government of India.  "
+            "article_number": "Article - 292",
+            "partition_title": "Borrowing by the Government of India.  "
           },
           {
-            "partition_title": "Article - 293. Borrowing by States.  "
+            "article_number": "Article - 293",
+            "partition_title": "Borrowing by States.  "
           }
         ]
       },
       {
-        "partition_title": "Chapter III. PROPERTY, CONTRACTS, RIGHTS, LIABILITIES, OBLIGATIONS AND SUITS </p>",
+        "partition_title": "Chapter III. PROPERTY, CONTRACTS, RIGHTS, LIABILITIES, OBLIGATIONS AND SUITS",
         "sub_partitions": [
           {
-            "partition_title": "Article - 294. Succession to property, assets, rights, liabilities and obligations in certain cases.  "
+            "article_number": "Article - 294",
+            "partition_title": "Succession to property, assets, rights, liabilities and obligations in certain cases.  "
           },
           {
-            "partition_title": "Article - 295. Succession to property, assets, rights, liabilities and obligations in other cases.  "
+            "article_number": "Article - 295",
+            "partition_title": "Succession to property, assets, rights, liabilities and obligations in other cases.  "
           },
           {
-            "partition_title": "Article - 296. Property accruing by escheat or laps or as bona vacantia.  "
+            "article_number": "Article - 296",
+            "partition_title": "Property accruing by escheat or laps or as bona vacantia.  "
           },
           {
-            "partition_title": "Article - 297. Things  of  value  within  territorial  waters  or  continental  shelf  and  resources  of  the  exclusive economic zone to vest in the Union.  "
+            "article_number": "Article - 297",
+            "partition_title": "Things  of  value  within  territorial  waters  or  continental  shelf  and  resources  of  the  exclusive economic zone to vest in the Union.  "
           },
           {
-            "partition_title": "Article - 298. Power to carry on trade, etc.299.Contracts.  "
+            "article_number": "Article - 298",
+            "partition_title": "Power to carry on trade, etc.299.Contracts.  "
           },
           {
-            "partition_title": "Article - 300. Suits and proceedings.  "
+            "article_number": "Article - 300",
+            "partition_title": "Suits and proceedings.  "
           }
         ]
       },
       {
-        "partition_title": "Chapter IV. RIGHT TO PROPERTY </p>",
+        "partition_title": "Chapter IV. RIGHT TO PROPERTY",
         "sub_partitions": []
       }
     ]
   },
   {
     "partition_number": "Part XIII",
-    "partition_title": "#### <p align=\"center\"> TRADE, COMMERCE AND INTERCOURSE WITHIN THETERRITORY OF INDIA  </p>",
+    "partition_title": "TRADE, COMMERCE AND INTERCOURSE WITHIN THETERRITORY OF INDIA",
     "sub_partitions": [
       {
-        "partition_title": "Article - 301. Freedom of trade, commerce and intercourse.  "
+        "article_number": "Article - 301",
+        "partition_title": "Freedom of trade, commerce and intercourse.  "
       },
       {
-        "partition_title": "Article - 302. Power of Parliament to impose restrictions on trade, commerce and intercourse.  "
+        "article_number": "Article - 302",
+        "partition_title": "Power of Parliament to impose restrictions on trade, commerce and intercourse.  "
       },
       {
-        "partition_title": "Article - 303. Restrictions  on  the  legislative  powers  of  the  Union  and  of  the  States  with  regard  to  trade  and commerce.  "
+        "article_number": "Article - 303",
+        "partition_title": "Restrictions  on  the  legislative  powers  of  the  Union  and  of  the  States  with  regard  to  trade  and commerce.  "
       },
       {
-        "partition_title": "Article - 304. Restrictions on trade, commerce and intercourse among States.  "
+        "article_number": "Article - 304",
+        "partition_title": "Restrictions on trade, commerce and intercourse among States.  "
       },
       {
-        "partition_title": "Article - 305. Saving of existing laws and laws providing for State monopolies.  "
+        "article_number": "Article - 305",
+        "partition_title": "Saving of existing laws and laws providing for State monopolies.  "
       },
       {
-        "partition_title": "Article - 306. [Omitted.]  "
+        "article_number": "Article - 306",
+        "partition_title": "[Omitted.]  "
       },
       {
-        "partition_title": "Article - 307. Appointment of authority for carrying out the purposes of articles 301 to 304.  "
+        "article_number": "Article - 307",
+        "partition_title": "Appointment of authority for carrying out the purposes of articles 301 to 304.  "
       }
     ]
   },
   {
     "partition_number": "Part XIV",
-    "partition_title": "#### <p align=\"center\"> SERVICES UNDER THE UNION AND THE STATES </p>",
+    "partition_title": "SERVICES UNDER THE UNION AND THE STATES",
     "sub_partitions": [
       {
-        "partition_title": "Chapter I. SERVICES </p>",
+        "partition_title": "Chapter I. SERVICES",
         "sub_partitions": [
           {
-            "partition_title": "Article - 308. Interpretation.  "
+            "article_number": "Article - 308",
+            "partition_title": "Interpretation.  "
           },
           {
-            "partition_title": "Article - 309. Recruitment and conditions of service of persons serving the Union or a State.  "
+            "article_number": "Article - 309",
+            "partition_title": "Recruitment and conditions of service of persons serving the Union or a State.  "
           },
           {
-            "partition_title": "Article - 310. Tenure of office of persons serving the Union or a State.  "
+            "article_number": "Article - 310",
+            "partition_title": "Tenure of office of persons serving the Union or a State.  "
           },
           {
-            "partition_title": "Article - 311. Dismissal, removal or reduction in rank of persons employed in civil capacities under the Union or a State.  "
+            "article_number": "Article - 311",
+            "partition_title": "Dismissal, removal or reduction in rank of persons employed in civil capacities under the Union or a State.  "
           },
           {
-            "partition_title": "Article - 312. All-India services."
+            "article_number": "Article - 312",
+            "partition_title": "All-India services."
           },
           {
-            "partition_title": "Article - 313. Transitional provisions.  "
+            "article_number": "Article - 313",
+            "partition_title": "Transitional provisions.  "
           },
           {
-            "partition_title": "Article - 314. [Omitted.]"
+            "article_number": "Article - 314",
+            "partition_title": "[Omitted.]"
           }
         ]
       },
       {
-        "partition_title": "Chapter II. #### <p align=\"center\"> CHAPTER II PUBLIC SERVICE COMMISSIONS </p>",
+        "partition_title": "Chapter II. CHAPTER II PUBLIC SERVICE COMMISSIONS",
         "sub_partitions": [
           {
-            "partition_title": "Article - 315. Public Service Commissions for the Union and for the States.  "
+            "article_number": "Article - 315",
+            "partition_title": "Public Service Commissions for the Union and for the States.  "
           },
           {
-            "partition_title": "Article - 316. Appointment and term of office of members.  "
+            "article_number": "Article - 316",
+            "partition_title": "Appointment and term of office of members.  "
           },
           {
-            "partition_title": "Article - 317. Removal and suspension of a member of a Public Service Commission.  "
+            "article_number": "Article - 317",
+            "partition_title": "Removal and suspension of a member of a Public Service Commission.  "
           },
           {
-            "partition_title": "Article - 318. Power to make regulations as to conditions of service of members and staff of the Commission.  "
+            "article_number": "Article - 318",
+            "partition_title": "Power to make regulations as to conditions of service of members and staff of the Commission.  "
           },
           {
-            "partition_title": "Article - 319. Prohibition  as  to  the  holding  of  offices  by  members  of  Commission  on  ceasing  to  be  such members.  "
+            "article_number": "Article - 319",
+            "partition_title": "Prohibition  as  to  the  holding  of  offices  by  members  of  Commission  on  ceasing  to  be  such members.  "
           },
           {
-            "partition_title": "Article - 320. Functions of Public Service Commissions.  "
+            "article_number": "Article - 320",
+            "partition_title": "Functions of Public Service Commissions.  "
           },
           {
-            "partition_title": "Article - 321. Power to extend functions of Public Service Commissions.  "
+            "article_number": "Article - 321",
+            "partition_title": "Power to extend functions of Public Service Commissions.  "
           },
           {
-            "partition_title": "Article - 322. Expenses of Public Service Commissions.323.Reports of Public Service Commissions."
+            "article_number": "Article - 322",
+            "partition_title": "Expenses of Public Service Commissions.323.Reports of Public Service Commissions."
           }
         ]
       }
@@ -1297,103 +1612,127 @@
   },
   {
     "partition_number": "Part XIV",
-    "partition_title": "#### <p align=\"center\"> TRIBUNALS </p>",
+    "partition_title": "TRIBUNALS",
     "sub_partitions": []
   },
   {
     "partition_number": "Part XV",
-    "partition_title": "#### <p align=\"center\"> ELECTIONS </p>",
+    "partition_title": "ELECTIONS",
     "sub_partitions": [
       {
-        "partition_title": "Article - 324. Superintendence, direction and control of elections to be vested in an Election Commission.  "
+        "article_number": "Article - 324",
+        "partition_title": "Superintendence, direction and control of elections to be vested in an Election Commission.  "
       },
       {
-        "partition_title": "Article - 325. No person to be ineligible for inclusion in, or to claim to be included in a special, electoral roll on grounds of religion, race, caste or sex.326.Elections to the House of the People and to the Legislative Assemblies of States to be on the basis of adult suffrage.  "
+        "article_number": "Article - 325",
+        "partition_title": "No person to be ineligible for inclusion in, or to claim to be included in a special, electoral roll on grounds of religion, race, caste or sex.326.Elections to the House of the People and to the Legislative Assemblies of States to be on the basis of adult suffrage.  "
       },
       {
-        "partition_title": "Article - 327. Power of Parliament to make provision with respect to elections to Legislatures.  "
+        "article_number": "Article - 327",
+        "partition_title": "Power of Parliament to make provision with respect to elections to Legislatures.  "
       },
       {
-        "partition_title": "Article - 328. Power of Legislature of a State to make provision with respect to elections to such Legislature.  "
+        "article_number": "Article - 328",
+        "partition_title": "Power of Legislature of a State to make provision with respect to elections to such Legislature.  "
       },
       {
-        "partition_title": "Article - 329. Bar to interference by courts in electoral matters.  "
+        "article_number": "Article - 329",
+        "partition_title": "Bar to interference by courts in electoral matters.  "
       }
     ]
   },
   {
     "partition_number": "Part XVI",
-    "partition_title": "#### <p align=\"center\"> SPECIAL PROVISIONS RELATING TO CERTAIN CLASSES </p>",
+    "partition_title": "SPECIAL PROVISIONS RELATING TO CERTAIN CLASSES",
     "sub_partitions": [
       {
-        "partition_title": "Article - 330. Reservation of seats for Scheduled Castes and Scheduled Tribes in the House of the People.  "
+        "article_number": "Article - 330",
+        "partition_title": "Reservation of seats for Scheduled Castes and Scheduled Tribes in the House of the People.  "
       },
       {
-        "partition_title": "Article - 331. Representation of the Anglo-Indian community in the House of the People.  "
+        "article_number": "Article - 331",
+        "partition_title": "Representation of the Anglo-Indian community in the House of the People.  "
       },
       {
-        "partition_title": "Article - 332. Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of the States.  "
+        "article_number": "Article - 332",
+        "partition_title": "Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of the States.  "
       },
       {
-        "partition_title": "Article - 333. Representation of the Anglo-Indian community in the Legislative Assemblies of the States.  "
+        "article_number": "Article - 333",
+        "partition_title": "Representation of the Anglo-Indian community in the Legislative Assemblies of the States.  "
       },
       {
-        "partition_title": "Article - 334. Reservation of seats and special representation to cease after seventy years.  "
+        "article_number": "Article - 334",
+        "partition_title": "Reservation of seats and special representation to cease after seventy years.  "
       },
       {
-        "partition_title": "Article - 335. Claims of Scheduled Castes and Scheduled Tribes to services and posts.  "
+        "article_number": "Article - 335",
+        "partition_title": "Claims of Scheduled Castes and Scheduled Tribes to services and posts.  "
       },
       {
-        "partition_title": "Article - 336. Special provision for Anglo-Indian community in certain services."
+        "article_number": "Article - 336",
+        "partition_title": "Special provision for Anglo-Indian community in certain services."
       },
       {
-        "partition_title": "Article - 337. Special provision with respect to educational grants for the benefit of Anglo-Indian Community.  "
+        "article_number": "Article - 337",
+        "partition_title": "Special provision with respect to educational grants for the benefit of Anglo-Indian Community.  "
       },
       {
-        "partition_title": "Article - 338. National Commission for Scheduled Castes.338A.National Commission for Scheduled Tribes.  "
+        "article_number": "Article - 338",
+        "partition_title": "National Commission for Scheduled Castes.338A.National Commission for Scheduled Tribes.  "
       },
       {
-        "partition_title": "Article - 339. Control of the Union over the administration of Scheduled Areas and the welfare of Scheduled Tribes.  "
+        "article_number": "Article - 339",
+        "partition_title": "Control of the Union over the administration of Scheduled Areas and the welfare of Scheduled Tribes.  "
       },
       {
-        "partition_title": "Article - 340. Appointment of  a Commission to investigate the conditions of backward classes.  "
+        "article_number": "Article - 340",
+        "partition_title": "Appointment of  a Commission to investigate the conditions of backward classes.  "
       },
       {
-        "partition_title": "Article - 341. Scheduled Castes.  "
+        "article_number": "Article - 341",
+        "partition_title": "Scheduled Castes.  "
       },
       {
-        "partition_title": "Article - 342. Scheduled Tribes.  "
+        "article_number": "Article - 342",
+        "partition_title": "Scheduled Tribes.  "
       },
       {
-        "partition_title": "Article - 343. Official language of the Union.344.Commission and Committee of Parliament on official language.  "
+        "article_number": "Article - 343",
+        "partition_title": "Official language of the Union.344.Commission and Committee of Parliament on official language.  "
       },
       {
-        "partition_title": "Chapter II. REGIONAL LANGUAGES </p>",
+        "partition_title": "Chapter II. REGIONAL LANGUAGES",
         "sub_partitions": [
           {
-            "partition_title": "Article - 345. Official language or languages of a State.  "
+            "article_number": "Article - 345",
+            "partition_title": "Official language or languages of a State.  "
           },
           {
-            "partition_title": "Article - 346. Official language for communicationbetween one State and another or between a State and the Union.  "
+            "article_number": "Article - 346",
+            "partition_title": "Official language for communicationbetween one State and another or between a State and the Union.  "
           },
           {
-            "partition_title": "Article - 347. Special provision relating to language spoken by a section of the population of a State.  "
+            "article_number": "Article - 347",
+            "partition_title": "Special provision relating to language spoken by a section of the population of a State.  "
           }
         ]
       },
       {
-        "partition_title": "Chapter III. </p>",
+        "partition_title": "Chapter III. ",
         "sub_partitions": [
           {
-            "partition_title": "Article - 348. Language to be used in the Supreme Court and in the High Courts and for Acts, Bills, etc.349.Special procedure for enactment of certain laws relating to language.  "
+            "article_number": "Article - 348",
+            "partition_title": "Language to be used in the Supreme Court and in the High Courts and for Acts, Bills, etc.349.Special procedure for enactment of certain laws relating to language.  "
           }
         ]
       },
       {
-        "partition_title": "Chapter IV. SPECIAL DIRECTIVES </p>",
+        "partition_title": "Chapter IV. SPECIAL DIRECTIVES",
         "sub_partitions": [
           {
-            "partition_title": "Article - 350. Language to be used in representations for redress of grievances.  "
+            "article_number": "Article - 350",
+            "partition_title": "Language to be used in representations for redress of grievances.  "
           }
         ]
       }
@@ -1401,109 +1740,135 @@
   },
   {
     "partition_number": "Part XVIII",
-    "partition_title": "#### <p align=\"center\"> EMERGENCY PROVISIONS </p>",
+    "partition_title": "EMERGENCY PROVISIONS",
     "sub_partitions": [
       {
-        "partition_title": "Article - 352. Proclamation of Emergency.  "
+        "article_number": "Article - 352",
+        "partition_title": "Proclamation of Emergency.  "
       },
       {
-        "partition_title": "Article - 353. Effect of Proclamation of Emergency.354.Application of provisions relating to distribution of revenues while a Proclamation of Emergency is in operation.355.Duty of the Union to protect States against external aggression and internal disturbance.  "
+        "article_number": "Article - 353",
+        "partition_title": "Effect of Proclamation of Emergency.354.Application of provisions relating to distribution of revenues while a Proclamation of Emergency is in operation.355.Duty of the Union to protect States against external aggression and internal disturbance.  "
       },
       {
-        "partition_title": "Article - 356. Provisions in case of failure of constitutional machinery in States.  "
+        "article_number": "Article - 356",
+        "partition_title": "Provisions in case of failure of constitutional machinery in States.  "
       },
       {
-        "partition_title": "Article - 357. Exercise of legislative powers under Proclamation issued under article 356.  "
+        "article_number": "Article - 357",
+        "partition_title": "Exercise of legislative powers under Proclamation issued under article 356.  "
       },
       {
-        "partition_title": "Article - 358. Suspension  of provisions of article 19 during emergencies.359.Suspension of the enforcement of the rights conferred by Part III during emergencies.  "
+        "article_number": "Article - 358",
+        "partition_title": "Suspension  of provisions of article 19 during emergencies.359.Suspension of the enforcement of the rights conferred by Part III during emergencies.  "
       }
     ]
   },
   {
     "partition_number": "Part XIX",
-    "partition_title": "#### <p align=\"center\"> MISCELLANEOUS ARTICLES  </p>",
+    "partition_title": "MISCELLANEOUS ARTICLES",
     "sub_partitions": [
       {
-        "partition_title": "Article - 361. Protection of President and Governors and Rajpramukhs.  "
+        "article_number": "Article - 361",
+        "partition_title": "Protection of President and Governors and Rajpramukhs.  "
       },
       {
-        "partition_title": "Article - 362. [Omitted.]  "
+        "article_number": "Article - 362",
+        "partition_title": "[Omitted.]  "
       },
       {
-        "partition_title": "Article - 363. Bar to interference by courts in disputes arising out of certain treaties, agreements, etc.  "
+        "article_number": "Article - 363",
+        "partition_title": "Bar to interference by courts in disputes arising out of certain treaties, agreements, etc.  "
       },
       {
-        "partition_title": "Article - 364. Special provisions as to major ports and aerodromes.  "
+        "article_number": "Article - 364",
+        "partition_title": "Special provisions as to major ports and aerodromes.  "
       },
       {
-        "partition_title": "Article - 365. Effect of failure to comply with, or to give effect to, directions given by the Union.  "
+        "article_number": "Article - 365",
+        "partition_title": "Effect of failure to comply with, or to give effect to, directions given by the Union.  "
       },
       {
-        "partition_title": "Article - 366. Definitions.  "
+        "article_number": "Article - 366",
+        "partition_title": "Definitions.  "
       },
       {
-        "partition_title": "Article - 367. Interpretation.  "
+        "article_number": "Article - 367",
+        "partition_title": "Interpretation.  "
       }
     ]
   },
   {
     "partition_number": "Part XX",
-    "partition_title": "#### <p align=\"center\"> AMENDMENT OF THE CONSTITUTION </p>",
+    "partition_title": "AMENDMENT OF THE CONSTITUTION",
     "sub_partitions": [
       {
-        "partition_title": "Article - 368. Power of Parliament to amend the Constitution and procedure therefore.  "
+        "article_number": "Article - 368",
+        "partition_title": "Power of Parliament to amend the Constitution and procedure therefore.  "
       }
     ]
   },
   {
     "partition_number": "Part XXI",
-    "partition_title": "#### <p align=\"center\"> TEMPORARY, TRANSITIONAL AND SPECIAL PROVISIONS  </p>",
+    "partition_title": "TEMPORARY, TRANSITIONAL AND SPECIAL PROVISIONS",
     "sub_partitions": [
       {
-        "partition_title": "Article - 369. Temporary power to Parliament to make laws with respect to certain matters in the State List as if they were matters in the Concurrent List.370.Temporary provisions with respect to the State of Jammu and Kashmir.  "
+        "article_number": "Article - 369",
+        "partition_title": "Temporary power to Parliament to make laws with respect to certain matters in the State List as if they were matters in the Concurrent List.370.Temporary provisions with respect to the State of Jammu and Kashmir.  "
       },
       {
-        "partition_title": "Article - 371. Special provision with respect to the States of Maharashtra and Gujarat.  "
+        "article_number": "Article - 371",
+        "partition_title": "Special provision with respect to the States of Maharashtra and Gujarat.  "
       },
       {
-        "partition_title": "Article - 372. Continuance in force of existing laws and their adaptation.  "
+        "article_number": "Article - 372",
+        "partition_title": "Continuance in force of existing laws and their adaptation.  "
       },
       {
-        "partition_title": "Article - 373. Power of President to make order in respect of persons underpreventive detention in certain cases.  "
+        "article_number": "Article - 373",
+        "partition_title": "Power of President to make order in respect of persons underpreventive detention in certain cases.  "
       },
       {
-        "partition_title": "Article - 374. Provisions  as  to  Judges  of  the  Federal  Court  and  proceedings  pending  in  the  Federal  Court  or before His Majesty in Council.  "
+        "article_number": "Article - 374",
+        "partition_title": "Provisions  as  to  Judges  of  the  Federal  Court  and  proceedings  pending  in  the  Federal  Court  or before His Majesty in Council.  "
       },
       {
-        "partition_title": "Article - 375. Courts, authorities and officers to continue to function subject to the provisionsof the Constitution."
+        "article_number": "Article - 375",
+        "partition_title": "Courts, authorities and officers to continue to function subject to the provisionsof the Constitution."
       },
       {
-        "partition_title": "Article - 376. Provisions as to Judges of High Courts.    "
+        "article_number": "Article - 376",
+        "partition_title": "Provisions as to Judges of High Courts.    "
       },
       {
-        "partition_title": "Article - 377. Provisions as to Comptroller and Auditor-General of India.  "
+        "article_number": "Article - 377",
+        "partition_title": "Provisions as to Comptroller and Auditor-General of India.  "
       },
       {
-        "partition_title": "Article - 378. Provisions as to Public Service Commissions.  "
+        "article_number": "Article - 378",
+        "partition_title": "Provisions as to Public Service Commissions.  "
       },
       {
-        "partition_title": "Article - 392. Power of the President to remove difficulties."
+        "article_number": "Article - 392",
+        "partition_title": "Power of the President to remove difficulties."
       }
     ]
   },
   {
     "partition_number": "Part XXII",
-    "partition_title": "#### <p align=\"center\"> SHORT TITLE, COMMENCEMENT, AUTHORITATIVE TEXT IN HINDI AND REPEALS </p>",
+    "partition_title": "SHORT TITLE, COMMENCEMENT, AUTHORITATIVE TEXT IN HINDI AND REPEALS",
     "sub_partitions": [
       {
-        "partition_title": "Article - 393. Short title.  "
+        "article_number": "Article - 393",
+        "partition_title": "Short title.  "
       },
       {
-        "partition_title": "Article - 394. Commencement.  "
+        "article_number": "Article - 394",
+        "partition_title": "Commencement.  "
       },
       {
-        "partition_title": "Article - 395. Repeals."
+        "article_number": "Article - 395",
+        "partition_title": "Repeals."
       }
     ]
   }
