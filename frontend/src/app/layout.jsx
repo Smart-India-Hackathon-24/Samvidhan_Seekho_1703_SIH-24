@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-				<div className="h-dvh w-dvw mb-[10vh]">{children}</div>
+				<div className="h-dvh w-dvw mb-[13vh]">{children}</div>
 				<DockComponent />
 			</body>
 		</html>
