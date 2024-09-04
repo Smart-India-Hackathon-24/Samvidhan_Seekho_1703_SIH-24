@@ -8,7 +8,7 @@ import {
 
 export default function CustomToolTip({ children, title }) {
 	return (
-		<TooltipProvider delayDuration={200} >
+		<TooltipProvider delayDuration={200}>
 			<Tooltip>
 				<TooltipTrigger asChild>{children}</TooltipTrigger>
 				<TooltipContent

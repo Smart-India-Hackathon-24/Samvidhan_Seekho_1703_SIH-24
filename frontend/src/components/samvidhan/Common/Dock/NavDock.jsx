@@ -98,10 +98,10 @@ export default function NavDock() {
 					magnification={70}
 					distance={100}
 					direction="middle"
-					className="flex bg-white/90 overflow-y-scroll shadow-xl justify-evenly items-center mx-0 md:w-[30vw] w-[95vw] h-full mt-0"
+					className="flex bg-white/90 shadow-xl justify-evenly items-center mx-0 md:w-[30vw] w-[95vw] h-full mt-0"
 				>
 					{DATA.navbar.map((item) => (
-						<DockIcon key={item.label} asChild>
+						<DockIcon key={item.label} asChild className="relative">
 							<CustomToolTip title={item.label}>
 								<Link
 									href={item.href}
