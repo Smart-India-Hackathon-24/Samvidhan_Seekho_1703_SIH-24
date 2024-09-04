@@ -95,7 +95,7 @@ export default function NavDock() {
 		<div className="relative h-[75%] flex justify-center items-center ">
 			{isDockVisible ? (
 				<Dock
-					magnification={70}
+					magnification={60}
 					distance={100}
 					direction="middle"
 					className="flex bg-white/90 shadow-xl justify-evenly items-center mx-0 md:w-[30vw] w-[95vw] h-full mt-0"
@@ -107,12 +107,12 @@ export default function NavDock() {
 									href={item.href}
 									className="bg-gray-700/10 dark:bg-white/10 p-3 rounded-full"
 								>
-									<item.icon className="size-full min-w-4 min-h-4 md:min-w-7 md:min-h-7 stroke-[1.5] text-gray-700" />
+									<item.icon className="size-full min-w-4 min-h-4 md:min-w-5 md:min-h-5 stroke-[1.5] text-gray-700" />
 								</Link>
 							</CustomToolTip>
 						</DockIcon>
 					))}
-					<Separator orientation="vertical" className="h-full bg-gray-700" />
+					<Separator orientation="vertical" className="h-full bg-black/30" />
 					{Object.entries(DATA.contact.social).map(([name, social]) => (
 						<DockIcon key={name} asChild>
 							<CustomToolTip title={social.name}>
@@ -120,12 +120,12 @@ export default function NavDock() {
 									href={social.url}
 									className="bg-gray-700/10 dark:bg-white/10 p-3 rounded-full"
 								>
-									<social.icon className="size-full min-w-4 min-h-4 md:min-w-7 md:min-h-7 stroke-[1.5] text-gray-700" />
+									<social.icon className="size-full min-w-4 min-h-4 md:min-w-5 md:min-h-5 stroke-[1.5] text-gray-700" />
 								</Link>
 							</CustomToolTip>
 						</DockIcon>
 					))}
-					<Separator orientation="vertical" className="h-full py-2" />
+					<Separator orientation="vertical" className="h-full bg-black/30" />
 
 					{Object.entries(DATA.utility).map(([name, utility]) => {
 						const IconComponent =
@@ -150,7 +150,7 @@ export default function NavDock() {
 										className="bg-gray-700/10 dark:bg-white/10 p-3 rounded-full"
 									>
 										{IconComponent && (
-											<IconComponent className="size-full min-w-4 min-h-4 md:min-w-7 md:min-h-7 stroke-[1.5] text-gray-700" />
+											<IconComponent className="size-full min-w-4 min-h-4 md:min-w-5 md:min-h-5 stroke-[1.5] text-gray-700" />
 										)}
 									</button>
 								</CustomToolTip>
