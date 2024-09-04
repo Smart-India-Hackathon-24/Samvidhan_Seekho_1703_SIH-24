@@ -67,3 +67,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide scrollbar for the entire website */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Class to enable scrollbar for specific sections */
+.enable-scrollbar {
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
+}
+
+.enable-scrollbar::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+}
+
+.enable-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.enable-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--muted);
+  border-radius: 20px;
+  border: 2px solid var(--background);
+}
+
+.enable-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--muted-foreground);
+}
