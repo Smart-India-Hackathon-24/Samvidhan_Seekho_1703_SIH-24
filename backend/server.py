@@ -5,6 +5,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 import uvicorn
 from Main import extractArticlesDataFromJSONandAddToDatabase
 from Database.DatabaseFunctions import *
+import os
 
 app = FastAPI()
 
@@ -26,8 +27,9 @@ app.add_middleware(
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # Hardcoded credentials
-USERNAME = "khushil"
-PASSWORD = "khushil@admin"
+USERNAME = os.getenv("USERNAME")
+PASSWORD = os.getenv("PASSWORD")
+TOKEN = os.getenv("TOKEN")
 
 
 # Function to verify credentials
@@ -39,7 +41,7 @@ def verify_credentials(username: str, password: str):
 
 # Dependency for protected routes
 async def get_current_user(token: str = Depends(oauth2_scheme)):
-    if token != "hardcoded_token":
+    if token != TOKEN:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid authentication credentials",
@@ -55,7 +57,7 @@ connection_router = APIRouter(tags=["Connection Status"])
 @connection_router.post("/token")
 async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     if verify_credentials(form_data.username, form_data.password):
-        return {"access_token": "hardcoded_token", "token_type": "bearer"}
+        return {"access_token": TOKEN, "token_type": "bearer"}
     raise HTTPException(status_code=400, detail="Incorrect username or password")
 
 

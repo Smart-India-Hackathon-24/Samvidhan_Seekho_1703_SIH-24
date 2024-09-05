@@ -59,7 +59,7 @@ def parse_markdown(file_path):
                 article_number = article_match.group(1)
                 article_title = article_match.group(2)
                 article = {
-                    "article_number":f"Article - {article_number}",
+                    "partition_number":f"Article - {article_number}",
                     "partition_title": f"{article_title}"
                 }
                 if current_section:
