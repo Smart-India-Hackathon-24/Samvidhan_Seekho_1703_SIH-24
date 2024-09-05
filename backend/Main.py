@@ -1,6 +1,6 @@
 import json
 import os
-from Database.DatabaseFunctions import addArticlesToDatabase
+from Database.DatabaseFunctions import *
 
 
 def extractArticlesDataFromJSONandAddToDatabase():
@@ -50,3 +50,17 @@ def extractArticlesDataFromJSONandAddToDatabase():
         addArticlesToDatabase(article)
 
 
+def extractPartitionsDataFromJSONandAddToDatabase():
+    input_file_path = os.path.join(
+        os.path.dirname(__file__), "Datasets", "constitution.json"
+    )
+
+    with open(input_file_path, "r", encoding="utf-8") as file:
+        formatted_data = json.load(file)
+
+    for partition in formatted_data:
+        addPartitionsToDatabase(partition)
+
+
+deleteAllPartitionsFromDatabase()
+extractPartitionsDataFromJSONandAddToDatabase()

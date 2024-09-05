@@ -1,7 +1,11 @@
 import re
 import json
+import sys
 import os
 
+# Add the 'backend' directory to sys.path (one level up from try.py)
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from Database.DatabaseFunctions import getAllArticleByNumberFromDatabase
 
 def parse_markdown(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
@@ -19,11 +23,10 @@ def parse_markdown(file_path):
                 data.append(current_part)
             part_match = re.match(r'### <p align="center"> PART ([IVXLC]+)', line)
             if part_match:
-                
                 part_number = part_match.group(1)
                 part_title = lines[lines.index(line) + 1].strip()
-                part_title=part_title.replace('#### <p align="center">','').strip()
-                part_title = part_title.replace('</p>', "").strip()
+                part_title = part_title.replace('#### <p align="center">', "").strip()
+                part_title = part_title.replace("</p>", "").strip()
                 current_part = {
                     "partition_number": f"Part {part_number}",
                     "partition_title": part_title,
@@ -36,8 +39,10 @@ def parse_markdown(file_path):
             if chapter_match:
                 chapter_number = chapter_match.group(1)
                 chapter_title = line.split(".")[-1].strip()
-                chapter_title=chapter_title.replace('#### <p align="center">','').strip()
-                chapter_title = chapter_title.replace('</p>', "").strip()
+                chapter_title = chapter_title.replace(
+                    '#### <p align="center">', ""
+                ).strip()
+                chapter_title = chapter_title.replace("</p>", "").strip()
                 current_chapter = {
                     "partition_title": f"Chapter {chapter_number}. {chapter_title}",
                     "sub_partitions": [],
@@ -45,9 +50,9 @@ def parse_markdown(file_path):
                 current_part["sub_partitions"].append(current_chapter)
                 current_section = None
         elif line.startswith('##### <p align="center">'):
-            line=line.replace('#### <p align="center">','').strip()
-            section_title = line.replace('</p>', "").strip()
-            section_title=section_title.replace('#', '').replace('*', '').strip()  
+            line = line.replace('#### <p align="center">', "").strip()
+            section_title = line.replace("</p>", "").strip()
+            section_title = section_title.replace("#", "").replace("*", "").strip()
             current_section = {"partition_title": section_title, "sub_partitions": []}
             if current_chapter:
                 current_chapter["sub_partitions"].append(current_section)
@@ -58,9 +63,14 @@ def parse_markdown(file_path):
             if article_match:
                 article_number = article_match.group(1)
                 article_title = article_match.group(2)
+                partition_id = getAllArticleByNumberFromDatabase(
+                    article_number
+                )  
+                print(partition_id)
                 article = {
-                    "partition_number":f"Article - {article_number}",
-                    "partition_title": f"{article_title}"
+                    "partition_number": f"Article - {article_number}",
+                    "partition_title": f"{article_title}",
+                    "partition_id": str(partition_id) if partition_id else None,  # Convert ObjectId to string
                 }
                 if current_section:
                     current_section["sub_partitions"].append(article)
@@ -73,7 +83,6 @@ def parse_markdown(file_path):
         data.append(current_part)
 
     return data
-
 
 # Parse the Markdown file
 markdown_file_path = os.path.join(os.path.dirname(__file__), "FinalConstitution.md")
