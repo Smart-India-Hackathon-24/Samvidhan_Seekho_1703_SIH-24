@@ -9,7 +9,7 @@ import os
 from dotenv import load_dotenv
 from fastapi.responses import JSONResponse
 from datetime import datetime, timedelta
-import jwt  # Reverting to original import
+import secrets
 
 # Load environment variables from .env file
 load_dotenv()
@@ -37,7 +37,6 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 USERNAME = os.getenv("USERNAME")
 PASSWORD = os.getenv("PASSWORD")
 SECRET_KEY = os.getenv("SECRET_KEY")
-ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 43200  # 30 days
 
 # Function to verify credentials
@@ -47,15 +46,9 @@ def verify_credentials(username: str, password: str):
     return False
 
 # Function to create access token
-def create_access_token(data: dict, expires_delta: timedelta = None):
-    to_encode = data.copy()
-    if expires_delta:
-        expire = datetime.utcnow() + expires_delta
-    else:
-        expire = datetime.utcnow() + timedelta(minutes=15)
-    to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
-    return encoded_jwt
+def create_access_token(username: str):
+    random_string = secrets.token_hex(16)
+    return f"{random_string}{username}"
 
 # Dependency for protected routes
 async def get_current_user(request: Request):
@@ -68,11 +61,10 @@ async def get_current_user(request: Request):
     if not token:
         raise credentials_exception
     try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username: str = payload.get("sub")
+        username = token[32:]  # Remove the random string to get the username
         if username is None:
             raise credentials_exception
-    except jwt.PyJWTError:
+    except:
         raise credentials_exception
     return {"username": username}
 
@@ -82,10 +74,7 @@ connection_router = APIRouter(tags=["Connection Status"])
 @connection_router.post("/login")
 async def login(username: str = Form(...), password: str = Form(...)):
     if verify_credentials(username, password):
-        access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-        access_token = create_access_token(
-            data={"sub": username}, expires_delta=access_token_expires
-        )
+        access_token = create_access_token(username)
         response = JSONResponse(content={"message": "Login successful"})
         response.set_cookie(key="access_token", value=access_token, httponly=True, secure=True, samesite="strict", max_age=ACCESS_TOKEN_EXPIRE_MINUTES * 60)
         return response

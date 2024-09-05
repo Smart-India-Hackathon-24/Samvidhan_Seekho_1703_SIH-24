@@ -61,6 +61,3 @@ def extractPartitionsDataFromJSONandAddToDatabase():
     for partition in formatted_data:
         addPartitionsToDatabase(partition)
 
-
-deleteAllPartitionsFromDatabase()
-extractPartitionsDataFromJSONandAddToDatabase()
