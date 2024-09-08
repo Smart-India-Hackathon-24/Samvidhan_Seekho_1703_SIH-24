@@ -13,7 +13,7 @@ def connect_to_database():
 
     # Create a new client and connect to the server using Server API version 1
     client = MongoClient(mongo_uri, server_api=ServerApi("1"))
-
+    
     # Send a ping to confirm a successful connection
     try:
         client.admin.command("ping")
