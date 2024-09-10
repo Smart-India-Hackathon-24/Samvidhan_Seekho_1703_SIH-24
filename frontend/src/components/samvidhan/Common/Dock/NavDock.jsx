@@ -70,7 +70,7 @@ export default function NavDock() {
 				if (timeoutRef.current) clearTimeout(timeoutRef.current);
 				timeoutRef.current = setTimeout(() => {
 					setIsDockVisible(false);
-				}, 4000); // Changed to 5 seconds (5000ms)
+				}, 10000); // Changed to 10 seconds (10000ms)
 			}
 		};
 
