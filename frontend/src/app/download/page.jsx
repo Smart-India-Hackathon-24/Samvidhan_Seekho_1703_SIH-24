@@ -1,7 +1,6 @@
-import React from 'react'
+import DownloadPage from "@/components/samvidhan/Download/DownloadPage";
+import React from "react";
 
 export default function page() {
-  return (
-    <div>page</div>
-  )
+	return <DownloadPage />;
 }
