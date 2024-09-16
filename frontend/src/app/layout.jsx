@@ -10,7 +10,9 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-				<div className="h-dvh w-dvw">{children}</div>
+				<div className="min-h-dvh w-dvw">
+					{children}
+				</div>
 				<DockComponent />
 			</body>
 		</html>
