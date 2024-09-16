@@ -101,7 +101,7 @@ export default function NavDock() {
 					className="flex bg-white/90 shadow-xl justify-evenly items-center mx-0 md:w-[30vw] w-[95vw] h-full mt-0"
 				>
 					{DATA.navbar.map((item) => (
-						<DockIcon key={item.label} asChild className="relative">
+						<DockIcon key={item.label} className="relative">
 							<CustomToolTip title={item.label}>
 								<Link
 									href={item.href}
@@ -114,7 +114,7 @@ export default function NavDock() {
 					))}
 					<Separator orientation="vertical" className="h-full bg-black/30" />
 					{Object.entries(DATA.contact.social).map(([name, social]) => (
-						<DockIcon key={name} asChild>
+						<DockIcon key={name} >
 							<CustomToolTip title={social.name}>
 								<Link
 									href={social.url}
@@ -139,7 +139,7 @@ export default function NavDock() {
 							name;
 
 						return (
-							<DockIcon key={name} asChild>
+							<DockIcon key={name} >
 								<CustomToolTip title={label}>
 									<button
 										onClick={() => {
