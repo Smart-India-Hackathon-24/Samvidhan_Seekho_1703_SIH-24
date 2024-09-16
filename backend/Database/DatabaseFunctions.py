@@ -43,7 +43,6 @@ def addArticlesToDatabase(article):
     except Exception as e:
         print(f"Error adding article to database: {str(e)}")
 
-
 def deleteAllArticlesFromDatabase():
     try:
         collection = get_collection("ConstitutionalArticles")
@@ -52,23 +51,35 @@ def deleteAllArticlesFromDatabase():
     except Exception as e:
         print(f"Error deleting all articles from database: {str(e)}")
 
-
 def getAllArticlesFromDatabase():
     try:
         collection = get_collection("ConstitutionalArticles")
         articles = list(collection.find({}))
+        for article in articles:
+            article['_id'] = str(article['_id'])
         return articles
     except Exception as e:
         print(f"Error retrieving articles from database: {str(e)}")
         return []
 
-
-def getAllArticleByNumberFromDatabase(article_number):
+def getArticleByNumberFromDatabase(article_number):
     try:
         collection = get_collection("ConstitutionalArticles")
         article = collection.find_one({"article_number": article_number})
         if article:
             return article["_id"]
+        else:
+            return None
+    except Exception as e:
+        print(f"Error retrieving article from database: {str(e)}")
+        return None
+
+def getArticleByIDFromDatabase(article_id):
+    try:
+        collection = get_collection("ConstitutionalArticles")
+        article = collection.find_one({"_id": article_id})
+        if article:
+            return article
         else:
             return None
     except Exception as e:

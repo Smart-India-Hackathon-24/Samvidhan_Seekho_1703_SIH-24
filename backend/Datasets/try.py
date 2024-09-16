@@ -5,7 +5,7 @@ import os
 
 # Add the 'backend' directory to sys.path (one level up from try.py)
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from Database.DatabaseFunctions import getAllArticleByNumberFromDatabase
+from Database.DatabaseFunctions import getArticleByNumberFromDatabase
 
 def parse_markdown(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
@@ -63,7 +63,7 @@ def parse_markdown(file_path):
             if article_match:
                 article_number = article_match.group(1)
                 article_title = article_match.group(2)
-                partition_id = getAllArticleByNumberFromDatabase(
+                partition_id = getArticleByNumberFromDatabase(
                     article_number
                 )  
                 print(partition_id)
