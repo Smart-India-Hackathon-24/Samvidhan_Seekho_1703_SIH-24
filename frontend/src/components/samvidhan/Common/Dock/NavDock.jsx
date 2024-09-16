@@ -6,6 +6,7 @@ import CustomToolTip from "../CustomToolTip";
 import { Icons } from "./utils";
 import React, { useState, useEffect, useRef } from "react";
 import { ArrowUp, LucideChevronUp } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const DATA = {
 	navbar: [
@@ -62,6 +63,7 @@ export default function NavDock() {
 	const [isDockVisible, setIsDockVisible] = useState(true);
 	const [isArrowClosed, setIsArrowClosed] = useState(false);
 	const timeoutRef = useRef(null);
+	const path = usePathname();
 
 	useEffect(() => {
 		const handleMouseMove = () => {
@@ -105,16 +107,22 @@ export default function NavDock() {
 							<CustomToolTip title={item.label}>
 								<Link
 									href={item.href}
-									className="bg-gray-700/10 dark:bg-white/10 p-3 rounded-full"
+									className={`bg-gray-700/10 ${
+										path.includes(item.href) ? "bg-gray-700" : "bg-black/10"
+									} p-3 rounded-full`}
 								>
-									<item.icon className="size-full min-w-4 min-h-4 md:min-w-5 md:min-h-5 stroke-[1.5] text-gray-700" />
+									<item.icon
+										className={`size-full min-w-4 min-h-4 md:min-w-5 md:min-h-5 stroke-[1.5] text-gray-700 ${
+											path.includes(item.href) ? "text-white" : "text-gray-700"
+										}`}
+									/>
 								</Link>
 							</CustomToolTip>
 						</DockIcon>
 					))}
 					<Separator orientation="vertical" className="h-full bg-black/30" />
 					{Object.entries(DATA.contact.social).map(([name, social]) => (
-						<DockIcon key={name} >
+						<DockIcon key={name}>
 							<CustomToolTip title={social.name}>
 								<Link
 									href={social.url}
@@ -139,7 +147,7 @@ export default function NavDock() {
 							name;
 
 						return (
-							<DockIcon key={name} >
+							<DockIcon key={name}>
 								<CustomToolTip title={label}>
 									<button
 										onClick={() => {
