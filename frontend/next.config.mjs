@@ -13,8 +13,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'www.dragnsurvey.com',
+        hostname: 'cdn.textstudio.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'mir-s3-cdn-cf.behance.net',
+      }
     ],
   },
 };
