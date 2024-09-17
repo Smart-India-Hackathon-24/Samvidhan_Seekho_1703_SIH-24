@@ -107,8 +107,8 @@ export default function NavDock() {
 							<CustomToolTip title={item.label}>
 								<Link
 									href={item.href}
-									className={`bg-gray-700/10 ${
-										path.includes(item.href) ? "bg-gray-700" : "bg-black/10"
+									className={` ${
+										path.includes(item.href) ? "bg-gray-700" : "bg-gray-700/10"
 									} p-3 rounded-full`}
 								>
 									<item.icon
