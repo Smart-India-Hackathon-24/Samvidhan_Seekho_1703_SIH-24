@@ -1,6 +1,13 @@
 "use client";
+"use client";
 
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import React, {
+	useState,
+	useEffect,
+	useRef,
+	useCallback,
+	useMemo,
+} from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -14,7 +21,7 @@ const words = [
 	"PARLIAMENT",
 	"FEDERALISM",
 ];
-const gridSize = 10;
+const gridSize = 15;
 const maxAttempts = 20;
 
 const generateGrid = (wordsToPlace) => {
@@ -34,6 +41,7 @@ const generateGrid = (wordsToPlace) => {
 
 	const wordPositions = {};
 	const wordColors = {};
+	const usedColors = new Set();
 
 	wordsToPlace.forEach((word) => {
 		let placed = false;
@@ -49,7 +57,12 @@ const generateGrid = (wordsToPlace) => {
 			if (canPlaceWord(grid, word, start, direction)) {
 				placeWord(grid, word, start, direction);
 				wordPositions[word] = { start, direction };
-				wordColors[word] = getRandomColor();
+				let color;
+				do {
+					color = getRandomColor();
+				} while (usedColors.has(color));
+				usedColors.add(color);
+				wordColors[word] = color;
 				placed = true;
 			}
 			attempts++;
@@ -96,7 +109,16 @@ const placeWord = (grid, word, start, direction) => {
 };
 
 const getRandomColor = () => {
-	const colors = ['bg-blue-500', 'bg-green-500', 'bg-red-500', 'bg-yellow-500', 'bg-purple-500', 'bg-pink-500', 'bg-teal-500', 'bg-orange-500'];
+	const colors = [
+		"bg-blue-500",
+		"bg-green-500",
+		"bg-red-500",
+		"bg-yellow-500",
+		"bg-purple-500",
+		"bg-pink-500",
+		"bg-teal-500",
+		"bg-orange-500",
+	];
 	return colors[Math.floor(Math.random() * colors.length)];
 };
 
@@ -109,24 +131,30 @@ export default function WordFinder() {
 	const [isDragging, setIsDragging] = useState(false);
 	const [startCell, setStartCell] = useState(null);
 	const [score, setScore] = useState(0);
-	const [attempts, setAttempts] = useState(maxAttempts);
+	const [attempts, setAttempts] = useState(0);
 	const [timer, setTimer] = useState(0);
 	const [gameOver, setGameOver] = useState(false);
 	const [showAnswers, setShowAnswers] = useState(false);
+	const [correctMoves, setCorrectMoves] = useState(0);
 	const gridRef = useRef(null);
 	const intervalRef = useRef(null);
 
 	const startNewGame = useCallback(() => {
-		const { grid: newGrid, wordPositions: newWordPositions, wordColors: newWordColors } = generateGrid(words);
+		const {
+			grid: newGrid,
+			wordPositions: newWordPositions,
+			wordColors: newWordColors,
+		} = generateGrid(words);
 		setGrid(newGrid);
 		setWordPositions(newWordPositions);
 		setWordColors(newWordColors);
 		setFoundWords([]);
 		setScore(0);
-		setAttempts(maxAttempts);
+		setAttempts(0);
 		setTimer(0);
 		setGameOver(false);
 		setShowAnswers(false);
+		setCorrectMoves(0);
 	}, []);
 
 	useEffect(() => {
@@ -142,33 +170,49 @@ export default function WordFinder() {
 		return () => clearInterval(intervalRef.current);
 	}, [gameOver]);
 
-	const handleMouseDown = useCallback((x, y) => {
-		if (!gameOver) {
-			setIsDragging(true);
-			setStartCell({ x, y });
-			setSelectedCells([{ x, y }]);
-		}
-	}, [gameOver]);
-
-	const handleMouseEnter = useCallback((x, y) => {
-		if (isDragging && startCell && !gameOver) {
-			const dx = Math.sign(x - startCell.x);
-			const dy = Math.sign(y - startCell.y);
-			const newSelectedCells = [];
-
-			let cx = startCell.x;
-			let cy = startCell.y;
-
-			while (cx !== x || cy !== y) {
-				newSelectedCells.push({ x: cx, y: cy });
-				cx += dx;
-				cy += dy;
+	const handleMouseDown = useCallback(
+		(x, y) => {
+			if (!gameOver) {
+				setIsDragging(true);
+				setStartCell({ x, y });
+				setSelectedCells([{ x, y }]);
 			}
-			newSelectedCells.push({ x, y });
+		},
+		[gameOver]
+	);
 
-			setSelectedCells(newSelectedCells);
-		}
-	}, [isDragging, startCell, gameOver]);
+	const handleMouseEnter = useCallback(
+		(x, y) => {
+			if (isDragging && startCell && !gameOver) {
+				const dx = Math.sign(x - startCell.x);
+				const dy = Math.sign(y - startCell.y);
+				const newSelectedCells = [];
+
+				let cx = startCell.x;
+				let cy = startCell.y;
+
+				while (
+					(cx !== x || cy !== y) &&
+					cx >= 0 &&
+					cx < gridSize &&
+					cy >= 0 &&
+					cy < gridSize
+				) {
+					newSelectedCells.push({ x: cx, y: cy });
+					cx += dx;
+					cy += dy;
+				}
+
+				if (cx >= 0 && cx < gridSize && cy >= 0 && cy < gridSize) {
+					newSelectedCells.push({ x, y });
+					setSelectedCells(newSelectedCells);
+				} else {
+					setSelectedCells([]);
+				}
+			}
+		},
+		[isDragging, startCell, gameOver]
+	);
 
 	const handleMouseUp = useCallback(() => {
 		if (!gameOver) {
@@ -176,21 +220,15 @@ export default function WordFinder() {
 			const selectedWord = selectedCells
 				.map((cell) => grid[cell.x][cell.y])
 				.join("");
-			if (
-				words.includes(selectedWord) &&
-				!foundWords.includes(selectedWord)
-			) {
+			if (words.includes(selectedWord) && !foundWords.includes(selectedWord)) {
 				setFoundWords((prev) => [...prev, selectedWord]);
 				setScore((prevScore) => prevScore + selectedWord.length * 10);
-			} else {
-				setAttempts((prevAttempts) => prevAttempts - 1);
+				setCorrectMoves((prevMoves) => prevMoves + 1);
 			}
+			setAttempts((prevAttempts) => prevAttempts + 1);
 			setSelectedCells([]);
 
-			if (
-				foundWords.length + 1 === words.length ||
-				attempts === 1
-			) {
+			if (foundWords.length + 1 === words.length || attempts + 1 === maxAttempts) {
 				setGameOver(true);
 			}
 		}
@@ -214,35 +252,42 @@ export default function WordFinder() {
 		setShowAnswers(!showAnswers);
 	}
 
-	const getCellClassName = useCallback((x, y, cell) => {
-		if (showAnswers) {
-			for (const [word, position] of Object.entries(wordPositions)) {
-				const { start, direction } = position;
-				const [dx, dy] = direction;
-				for (let i = 0; i < word.length; i++) {
-					if (start.x + i * dx === x && start.y + i * dy === y) {
-						return `${wordColors[word]} text-white`;
+	const getCellClassName = useCallback(
+		(x, y, cell) => {
+			let cellColors = [];
+
+			if (showAnswers || foundWords.length > 0) {
+				for (const [word, position] of Object.entries(wordPositions)) {
+					const { start, direction } = position;
+					const [dx, dy] = direction;
+					for (let i = 0; i < word.length; i++) {
+						if (start.x + i * dx === x && start.y + i * dy === y) {
+							if (showAnswers || foundWords.includes(word)) {
+								cellColors.push(wordColors[word]);
+							}
+						}
 					}
 				}
 			}
-		}
 
-		if (selectedCells.some(selectedCell => selectedCell.x === x && selectedCell.y === y)) {
-			return "bg-blue-500 text-white";
-		}
-
-		for (const word of foundWords) {
-			const { start, direction } = wordPositions[word];
-			const [dx, dy] = direction;
-			for (let i = 0; i < word.length; i++) {
-				if (start.x + i * dx === x && start.y + i * dy === y) {
-					return `${wordColors[word]} text-white`;
-				}
+			if (
+				selectedCells.some(
+					(selectedCell) => selectedCell.x === x && selectedCell.y === y
+				)
+			) {
+				return "bg-blue-500 text-white";
 			}
-		}
 
-		return "bg-gray-200";
-	}, [showAnswers, wordPositions, selectedCells, foundWords, wordColors]);
+			if (cellColors.length > 1) {
+				return "bg-gray-700 text-white";
+			} else if (cellColors.length === 1) {
+				return `${cellColors[0]} text-white`;
+			}
+
+			return "bg-gray-200";
+		},
+		[showAnswers, wordPositions, selectedCells, foundWords, wordColors]
+	);
 
 	return (
 		<div className="w-full p-10 flex justify-between gap-10 mb-20">
@@ -266,25 +311,29 @@ export default function WordFinder() {
 				<div className="flex justify-between mb-4">
 					<div>
 						<p>Score: {score}</p>
-						<p>Attempts left: {attempts}</p>
+						<p>Attempts: {attempts}/{maxAttempts}</p>
 						<p>
 							Time: {Math.floor(timer / 60)}:
 							{(timer % 60).toString().padStart(2, "0")}
 						</p>
 					</div>
 				</div>
-				<Card className="p-4 mb-4">
+				<Card className="p-4">
 					<div
-						className="w-[60vw] space-y-5 mb-4 select-none"
+						className="w-[60vw] space-y-2 select-none"
 						ref={gridRef}
 						onMouseLeave={() => setIsDragging(false)}
 					>
 						{grid.map((row, x) => (
-							<div key={x} className="flex gap-5">
+							<div key={x} className="flex gap-2">
 								{row.map((cell, y) => (
 									<div
 										key={`${x}-${y}`}
-										className={`w-12 h-12 flex items-center justify-center text-sm font-bold rounded cursor-pointer ${getCellClassName(x, y, cell)}`}
+										className={`w-10 h-10 flex items-center justify-center text-sm font-bold rounded cursor-pointer ${getCellClassName(
+											x,
+											y,
+											cell
+										)}`}
 										onMouseDown={() => handleMouseDown(x, y)}
 										onMouseEnter={() => handleMouseEnter(x, y)}
 										onMouseUp={handleMouseUp}
@@ -309,6 +358,8 @@ export default function WordFinder() {
 						Time Taken: {Math.floor(timer / 60)}:
 						{(timer % 60).toString().padStart(2, "0")}
 					</p>
+					<p>Total Moves: {attempts}</p>
+					<p>Correct Moves: {correctMoves}</p>
 					<Button onClick={startNewGame} className="mt-2">
 						Start New Game
 					</Button>
