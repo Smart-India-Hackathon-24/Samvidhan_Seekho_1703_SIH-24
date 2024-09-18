@@ -15,6 +15,18 @@ export const GameCategoriesData = [
                 link: "/games/word-finder",
                 description: "test your IQ",
             },
+            {
+                name: "Match Following ",
+                image: "https://mir-s3-cdn-cf.behance.net/projects/404/84cb4269855641.Y3JvcCw4MDgsNjMyLDAsMA.png",
+                link: "/games/match-following",
+                description: "test your IQ",
+            },
+            {
+                name: "Drag And Drop",
+                image: "https://mir-s3-cdn-cf.behance.net/projects/404/84cb4269855641.Y3JvcCw4MDgsNjMyLDAsMA.png",
+                link: "/games/drag-drop",
+                description: "test your IQ",
+            },
         ],
     },
     {
