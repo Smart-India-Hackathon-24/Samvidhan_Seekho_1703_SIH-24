@@ -2,6 +2,7 @@ import React from "react";
 import CrossWordGame from "./CrossWordGame";
 import MatchFollowingGame from "./MatchFollowingGame";
 import DragAndDropGame from "./DragAndDropGame";
+import WordFinder from "./WordFinder";
 
 export default function EachGamePage({ game_name }) {
 	console.log(game_name)
@@ -15,6 +16,8 @@ export default function EachGamePage({ game_name }) {
 				return <MatchFollowingGame/>;
 			case "drag drop":
 				return <DragAndDropGame/>;
+			case "word finder":
+				return <WordFinder/>;
 			default:
 				return <div>Game not found</div>;
 		}
