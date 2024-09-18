@@ -49,4 +49,4 @@ def custom_openapi():
 app.openapi = custom_openapi
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=5000)
+    uvicorn.run(app, host="localhost", port=9999)
