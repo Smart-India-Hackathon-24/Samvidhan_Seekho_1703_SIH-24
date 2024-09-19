@@ -143,7 +143,7 @@ export default function WordScrambleGame() {
 
 	return (
 		<div className="p-4 w-full h-full flex justify-center items-center">
-			<Card className="relative overflow-hidden">
+			<Card className="relative overflow-hidden mt-10 pt-7">
 				<CardHeader>
 					<CardTitle className="text-2xl font-bold text-center">
 						Word Scramble Game
