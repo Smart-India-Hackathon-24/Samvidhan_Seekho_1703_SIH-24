@@ -7,21 +7,21 @@ export const GameCategoriesData = [
         games: [
             {
                 name: "Crossword",
-                image: "https://cdn.textstudio.com/output/sample/normal/3/0/8/6/crossword-puzzles-logo-103-16803.png",
+                image: "https://res.cloudinary.com/dzqf5owza/image/upload/v1726830666/OIP_dcopie.jpg",
                 hoverImage: "https://res.cloudinary.com/dzkhash8f/image/upload/v1726746364/Article-Match-9-19-2024_pugbat.png",
                 link: "/games/cross-word",
                 description: "Solve challenging puzzles.",
             },
             {
                 name: "Word Finder",
-                image: "https://mir-s3-cdn-cf.behance.net/projects/404/84cb4269855641.Y3JvcCw4MDgsNjMyLDAsMA.png",
+                image: "https://res.cloudinary.com/dzkhash8f/image/upload/v1726747434/d402e75e-e3a6-402d-8ae0-c4d3944811aa.png",
                 hoverImage: "https://res.cloudinary.com/dzkhash8f/image/upload/v1726747434/d402e75e-e3a6-402d-8ae0-c4d3944811aa.png",
                 link: "/games/word-finder",
                 description: "Find hidden words.",
             },
             {
                 name: "Word Scramble",
-                image: "https://res.cloudinary.com/dzkhash8f/image/upload/v1726744731/877x585_cppajy.jpg",
+                image: "https://res.cloudinary.com/dzqf5owza/image/upload/v1726830921/Screenshot_2024-09-20_164456_xuonre.png",
                 hoverImage: "https://res.cloudinary.com/dzkhash8f/image/upload/v1726746364/Article-Match-9-19-2024_pugbat.png",
                 link: "/games/word-scramble",
                 description: "Unscramble letters.",
@@ -33,6 +33,13 @@ export const GameCategoriesData = [
                 link: "/games/article-match",
                 description: "Match articles to their sections.",
             },
+            {
+                name: "E-Parliament",
+                image: "https://res.cloudinary.com/dzqf5owza/image/upload/v1726829242/download_tdllmn.jpg",
+                hoverImage: "https://res.cloudinary.com/dzkhash8f/image/upload/v1726746364/Article-Match-9-19-2024_pugbat.png",
+                link: "/games/e-parliament",
+                description: "School Students can play the role of stakeholders of parliament",
+            }
             // {
             //     name: "Drag And Drop",
             //     image: "https://mir-s3-cdn-cf.behance.net/projects/404/84cb4269855641.Y3JvcCw4MDgsNjMyLDAsMA.png",

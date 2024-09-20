@@ -21,7 +21,7 @@ export default function EachGamePage({ game_name }) {
 				return <WordScrambleGame />;
 
 			default:
-				return <div>Game not found</div>;
+				return <div>Game Comming Soon...</div>;
 		}
 	};
 	return <div>{renderGame()}</div>;
