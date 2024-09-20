@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import CustomToolTip from "../CustomToolTip";
 import { Icons } from "./utils";
 import React, { useState, useEffect, useRef } from "react";
-import { ArrowUp, LucideChevronUp } from "lucide-react";
+import { LucideChevronUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const DATA = {
@@ -24,21 +24,31 @@ const DATA = {
 	],
 	contact: {
 		social: {
+			Download: {
+				label: "Download Constitution",
+				href: "/download",
+				icon: Icons.download,
+			},
+			Chat: {
+				label: "Samvidhan Sampark",
+				href: "/samvidhan-sampark",
+				icon: Icons.chat,
+			},
 			GitHub: {
-				name: "GitHub",
-				url: "#",
+				label: "GitHub",
+				href: "https://github.com/Smart-India-Hackathon-24/Samvidhan_Seekho_1703_SIH-24",
 				icon: Icons.github,
 			},
-			LinkedIn: {
-				name: "LinkedIn",
-				url: "#",
-				icon: Icons.linkedin,
-			},
-			X: {
-				name: "X",
-				url: "#",
-				icon: Icons.x,
-			},
+			// LinkedIn: {
+			// 	label: "LinkedIn",
+			// 	href: "#",
+			// 	icon: Icons.linkedin,
+			// },
+			// X: {
+			// 	label: "X",
+			// 	href: "#",
+			// 	icon: Icons.x,
+			// },
 		},
 	},
 	utility: [
@@ -123,12 +133,23 @@ export default function NavDock() {
 					<Separator orientation="vertical" className="h-full bg-black/30" />
 					{Object.entries(DATA.contact.social).map(([name, social]) => (
 						<DockIcon key={name}>
-							<CustomToolTip title={social.name}>
+							<CustomToolTip title={social.label}>
 								<Link
-									href={social.url}
-									className="bg-gray-700/10 dark:bg-white/10 p-3 rounded-full"
+									href={social.href}
+									target={social.href.includes("https://") ? "_blank" : "_self"}
+									className={`${
+										path.includes(social.href)
+											? "bg-gray-700"
+											: "bg-gray-700/10 dark:bg-white/10"
+									} p-3 rounded-full`}
 								>
-									<social.icon className="size-full min-w-4 min-h-4 md:min-w-5 md:min-h-5 stroke-[1.5] text-gray-700" />
+									<social.icon
+										className={`size-full min-w-4 min-h-4 md:min-w-5 md:min-h-5 stroke-[1.5] ${
+											path.includes(social.href)
+												? "text-white"
+												: "text-gray-700"
+										}`}
+									/>
 								</Link>
 							</CustomToolTip>
 						</DockIcon>

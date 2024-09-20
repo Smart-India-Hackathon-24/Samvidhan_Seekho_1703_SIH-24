@@ -6,7 +6,7 @@ export default function GameCategories({ category }) {
 		<div className="flex flex-col gap-5">
 			<div className="flex flex-col gap-2">
 				<h1 className="text-2xl font-bold">{category.name}</h1>
-				<p className="text-sm text-gray-500">{category.description}</p>
+				<p className="text-sm text-gray-500 w-[45%]">{category.description}</p>
 			</div>
 			<div className="grid grid-cols-4 gap-5 w-full">
 				{category.games.map((game) => (

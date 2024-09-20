@@ -2,19 +2,19 @@
 
 const data = [
     {
-        title: "Quiz Game",
-        image: "/quizcard.png",
-        description: "A fun and interactive quiz game where you can test your knowledge on various topics. Features multiple-choice questions and scoring."
+        title: "Play & Learn",
+        image: "https://res.cloudinary.com/dzkhash8f/image/upload/v1726735016/th_pqhufw.jpg",
+        description: "Engage in interactive games and quizzes to learn about the Indian Constitution in a fun and memorable way. Perfect for students and curious citizens alike."
     },
     {
-        title: "Constitution",
-        image: "/coi.jpg",
-        description: "A comprehensive overview of the constitution including its history, key principles, and amendments. Explore the foundational document that shapes the governance."
+        title: "Simplified Constitution",
+        image: "https://res.cloudinary.com/dzkhash8f/image/upload/v1726733028/Constitution-of-India_h38pym.png",
+        description: "Access easy-to-understand explanations of the Indian Constitution. Break down complex legal jargon into simple language for better comprehension."
     },
     {
-        title: "AI Chat Bot",
-        image: "/chatbot.webp",
-        description: "An intelligent chatbot powered by AI that can handle a range of queries, provide information, and offer assistance in real-time."
+        title: "Samvidhan Sampark",
+        image: "https://res.cloudinary.com/dzkhash8f/image/upload/v1726733922/th_mceu8z.jpg",
+        description: "Chat with an AI assistant about the Indian Constitution. Get instant answers and explanations without reading through lengthy texts."
     }
 ];
 

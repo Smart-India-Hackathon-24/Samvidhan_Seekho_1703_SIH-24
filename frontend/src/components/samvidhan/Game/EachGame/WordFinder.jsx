@@ -1,5 +1,4 @@
 "use client";
-"use client";
 
 import React, {
 	useState,
@@ -12,16 +11,21 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 const words = [
-	"CONSTITUTION",
+	// "CONSTITUTION",
+	// "JUSTICE",
+	// "DEMOCRACY",
+	// "RIGHTS",
+	// "AMENDMENT",
+	// "JUDICIARY",
+	// "PARLIAMENT",
+	// "FEDERALISM",
+	"LAW",
+	"COURT",
+	"LAWYER",
 	"JUSTICE",
-	"DEMOCRACY",
-	"RIGHTS",
-	"AMENDMENT",
-	"JUDICIARY",
-	"PARLIAMENT",
-	"FEDERALISM",
+	"FEDERAL",
 ];
-const gridSize = 15;
+const gridSize = 7;
 const maxAttempts = 20;
 
 const generateGrid = (wordsToPlace) => {
@@ -110,7 +114,7 @@ const placeWord = (grid, word, start, direction) => {
 
 const getRandomColor = () => {
 	const colors = [
-		"bg-blue-500",
+		// "bg-blue-500",
 		"bg-green-500",
 		"bg-red-500",
 		"bg-yellow-500",
@@ -290,7 +294,7 @@ export default function WordFinder() {
 	);
 
 	return (
-		<div className="w-full p-10 flex justify-between gap-10 mb-20">
+		<div className="w-full p-10 flex justify-around gap-10 mb-20">
 			<div className="mb-4">
 				<h2 className="text-xl font-bold mb-2">Words to Find:</h2>
 				<ul className="list-disc pl-5">
@@ -308,7 +312,7 @@ export default function WordFinder() {
 			</div>
 			<div>
 				<h1 className="text-2xl font-bold mb-4">Word Finding Game</h1>
-				<div className="flex justify-between mb-4">
+				<div className="flex justify-around mb-4">
 					<div>
 						<p>Score: {score}</p>
 						<p>Attempts: {attempts}/{maxAttempts}</p>
@@ -320,7 +324,7 @@ export default function WordFinder() {
 				</div>
 				<Card className="p-4">
 					<div
-						className="w-[60vw] space-y-2 select-none"
+						className="max-w-[60vw] space-y-2 select-none"
 						ref={gridRef}
 						onMouseLeave={() => setIsDragging(false)}
 					>
