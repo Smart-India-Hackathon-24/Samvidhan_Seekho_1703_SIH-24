@@ -16,7 +16,19 @@ export const GameCategoriesData = [
                 description: "test your IQ",
             },
             {
-                name: "Match Following ",
+                name: "Word Scramble",
+                image: "https://mir-s3-cdn-cf.behance.net/projects/404/84cb4269855641.Y3JvcCw4MDgsNjMyLDAsMA.png",
+                link: "/games/word-scramble",
+                description: "test your IQ",
+            },
+            {
+                name: "New Word Scramble",
+                image: "https://mir-s3-cdn-cf.behance.net/projects/404/84cb4269855641.Y3JvcCw4MDgsNjMyLDAsMA.png",
+                link: "/games/new-word-scramble",
+                description: "test your IQ",
+            },
+            {
+                name: "Match Following",
                 image: "https://mir-s3-cdn-cf.behance.net/projects/404/84cb4269855641.Y3JvcCw4MDgsNjMyLDAsMA.png",
                 link: "/games/match-following",
                 description: "test your IQ",

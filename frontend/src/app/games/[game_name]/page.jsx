@@ -22,7 +22,7 @@ export default function page({ params }) {
 	const { game_name } = params;
 	return (
 		<div>
-			<EachGamePage game_name={game_name.toLowerCase().replace("-", " ")} />
+			<EachGamePage game_name={game_name.toLowerCase().replaceAll("-", " ")} />
 		</div>
 	);
 }
