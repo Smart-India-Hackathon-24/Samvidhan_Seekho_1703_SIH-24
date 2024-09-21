@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import data from "./constitutiondata";
 import { File, Folder, Tree } from "@/components/magicui/file-tree";
 import ChatComponent from "@/components/samvidhan/Constitution/ChatComponent";
@@ -48,6 +48,38 @@ export default function page() {
 	//   })) || [],
 	})) || [],
   }));
+  const [tooltipVisible, setTooltipVisible] = useState(false); // State for tooltip visibility
+  const [tooltipPosition, setTooltipPosition] = useState({ top: 0, left: 0 }); // State for tooltip position
+  const [selectedText, setSelectedText] = useState('');
+const [showAI,setShowAI] = useState(false);
+  const handleTextSelection = () => {
+    const selection = window.getSelection();
+    const text = selection.toString().trim();
+    if (text) {
+      const range = selection.getRangeAt(0);
+      const rect = range.getBoundingClientRect();
+      setTooltipPosition({
+        top: rect.top + window.scrollY - 35, // Adjusted to appear above the selected text
+        left: rect.left + window.scrollX,
+      });
+      setTooltipVisible(true);
+      setSelectedText(text);
+      
+
+    } else {
+      setTooltipVisible(false);
+      setSelectedText('');
+
+    }
+  };
+
+  
+useEffect(() => {
+  document.addEventListener("mouseup", handleTextSelection);
+  return () => {
+    document.removeEventListener("mouseup", handleTextSelection);
+  };
+}, []);
 
   return (
     <div className="flex p-10">
@@ -217,7 +249,7 @@ export default function page() {
           )} */}
         </div>
       </div>
-      <div className="w-7/12 ">
+      <div className="w-9/12 relative" >
         {/* {data[articleId]} */}
         <div className="my-2 px-4 gap-3">
           <h1 className="text-xl text-center font-bold">
@@ -233,6 +265,7 @@ export default function page() {
             Constitution is borrowed from the Constitution of Ireland which had
             copied it from the Spanish Constitution.
           </p>
+
 		  <ul className="gap-8">
           <li>
 		  (a) who was born in the territory of India; or
@@ -243,11 +276,28 @@ export default function page() {
           <li>(c) who has been ordinarily resident in the territory of India for not less than five years immediately preceding such commencement, shall be a citizen of India.
           </li>
 		  </ul>
+      {tooltipVisible && (
+  <button
+    style={{
+      position: "absolute",
+      top: tooltipPosition.y,
+      left: tooltipPosition.x,
+      zIndex: 1000,
+    }}
+    className="bg-gray-800 py-2 px-6 rounded-lg text-white "
+    onClick={()=>setShowAI(true)}
+  >
+    Ask to AI
+  </button>)}
         </div>
+
+        <ChatComponent userText={selectedText} showAI={showAI} />
       </div>
-      <div className="w-3/12 ">
-        <ChatComponent />
-      </div>
+      
+  
+      {/* <div className="w-3/12 ">
+        
+      </div> */}
     </div>
   );
 }
