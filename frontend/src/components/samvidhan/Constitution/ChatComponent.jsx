@@ -23,7 +23,7 @@ const initialMessages = [
 	},
 ];
 
-export default function ChatComponent() {
+export default function ChatComponent({ isOpen, setIsChatOpen }) {
 	const [messages, setMessages] = useState(
 		JSON.parse(localStorage.getItem("messages")) || initialMessages
 	);
@@ -57,11 +57,12 @@ export default function ChatComponent() {
 
 	return (
 		<div className="">
-			<Popover>
+			<Popover open={isOpen} onOpenChange={setIsChatOpen}>
 				<PopoverTrigger asChild>
 					<Button
 						id="open-chat"
 						className="bg-black group gap-3 text-white py-2 px-4 rounded-md hover:bg-black/80 transition duration-300 flex items-center text-center"
+						onClick={() => setIsChatOpen(!isOpen)}
 					>
 						<LucideBotMessageSquare />
 						AI Chat
