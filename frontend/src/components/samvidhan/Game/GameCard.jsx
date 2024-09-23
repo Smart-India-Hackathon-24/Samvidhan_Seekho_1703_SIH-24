@@ -20,11 +20,11 @@ export default function GameCard({ game }) {
 					width={200}
 					height={200}
 					quality={100}
-					className={`w-full h-[210px] object-cover rounded-lg transition-all duration-300 ease-in-out ${
-						isHovered ? "translate-y-[-100%]" : ""
-					}`}
+					className={`w-full h-[210px] object-cover rounded-lg transition-all duration-300 ease-in-out
+						`}
+						//  ${isHovered ? "translate-y-[-100%]" : ""}
 				/>
-				<Image
+				{/* <Image
 					src={game.hoverImage}
 					alt={game.name}
 					width={200}
@@ -33,7 +33,7 @@ export default function GameCard({ game }) {
 					className={`w-full h-[210px] object-cover rounded-lg absolute top-0 left-0 transition-all duration-300 ease-in-out ${
 						isHovered ? "translate-y-0" : "translate-y-[100%]"
 					}`}
-				/>
+				/> */}
 			</div>
 			<div className="pl-2">
 				<h3 className="text-lg font-semibold">{game.name}</h3>

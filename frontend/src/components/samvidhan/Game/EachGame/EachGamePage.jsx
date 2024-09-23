@@ -4,6 +4,7 @@ import MatchFollowingGame from "./MatchFollowingGame";
 import DragAndDropGame from "./DragAndDropGame";
 import WordFinder from "./WordFinder";
 import WordScrambleGame from "./WordScrambleGame";
+import EParliamentGame from "./EParliamentGame";
 
 export default function EachGamePage({ game_name }) {
 	console.log(game_name);
@@ -19,7 +20,8 @@ export default function EachGamePage({ game_name }) {
 				return <WordFinder />;
 			case "word scramble":
 				return <WordScrambleGame />;
-
+			case "e parliament":
+				return <EParliamentGame/>;
 			default:
 				return <div>Game not found</div>;
 		}
