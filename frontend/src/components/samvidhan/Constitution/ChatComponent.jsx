@@ -25,9 +25,7 @@ const initialMessages = [
 ];
 
 export default function ChatComponent({ isOpen, setIsChatOpen, selectedText }) {
-	const [messages, setMessages] = useState(
-		JSON.parse(localStorage.getItem("messages")) || initialMessages
-	);
+	const [messages, setMessages] = useState(initialMessages);
 	const [userInput, setUserInput] = useState("");
 	const chatContainerRef = useRef(null);
 	const chatboxRef = useRef(null);
@@ -36,7 +34,9 @@ export default function ChatComponent({ isOpen, setIsChatOpen, selectedText }) {
 	const addUserMessage = (message) => {
 		setMessages((prevMessages) => {
 			const newMessages = [...prevMessages, { text: message, user: true }];
-			localStorage.setItem("messages", JSON.stringify(newMessages));
+			if (typeof window !== "undefined") {
+				localStorage.setItem("messages", JSON.stringify(newMessages));
+			}
 			return newMessages;
 		});
 	};
@@ -44,10 +44,21 @@ export default function ChatComponent({ isOpen, setIsChatOpen, selectedText }) {
 	const addBotMessage = (message) => {
 		setMessages((prevMessages) => {
 			const newMessages = [...prevMessages, { text: message, user: false }];
-			localStorage.setItem("messages", JSON.stringify(newMessages));
+			if (typeof window !== "undefined") {
+				localStorage.setItem("messages", JSON.stringify(newMessages));
+			}
 			return newMessages;
 		});
 	};
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			const storedMessages = JSON.parse(localStorage.getItem("messages"));
+			if (storedMessages) {
+				setMessages(storedMessages);
+			}
+		}
+	}, []);
 
 	useEffect(() => {
 		if (selectedText) {
@@ -63,7 +74,9 @@ export default function ChatComponent({ isOpen, setIsChatOpen, selectedText }) {
 							}
 							return msg;
 						});
-						localStorage.setItem("messages", JSON.stringify(newMessages));
+						if (typeof window !== "undefined") {
+							localStorage.setItem("messages", JSON.stringify(newMessages));
+						}
 						return newMessages;
 					});
 				}, 2000);
