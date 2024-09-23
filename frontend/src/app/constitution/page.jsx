@@ -251,7 +251,11 @@ export default function page() {
 					</button>
 				)}
 				<div className="absolute right-10 top-5">
-					<ChatComponent isOpen={isChatOpen} setIsChatOpen={setIsChatOpen} />
+					<ChatComponent
+						isOpen={isChatOpen}
+						setIsChatOpen={setIsChatOpen}
+						selectedText={selectedText}
+					/>
 				</div>
 			</div>
 		</div>

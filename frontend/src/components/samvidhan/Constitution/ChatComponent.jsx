@@ -23,18 +23,52 @@ const initialMessages = [
 	},
 ];
 
-export default function ChatComponent({ isOpen, setIsChatOpen }) {
+export default function ChatComponent({ isOpen, setIsChatOpen, selectedText }) {
 	const [messages, setMessages] = useState(
 		JSON.parse(localStorage.getItem("messages")) || initialMessages
 	);
 	const [userInput, setUserInput] = useState("");
 	const chatContainerRef = useRef(null);
 	const chatboxRef = useRef(null);
+	const inputRef = useRef(null);
 
 	const addUserMessage = (message) => {
-		setMessages([...messages, { text: message, user: true }]);
-		localStorage.setItem("messages", JSON.stringify(messages));
+		setMessages((prevMessages) => {
+			const newMessages = [...prevMessages, { text: message, user: true }];
+			localStorage.setItem("messages", JSON.stringify(newMessages));
+			return newMessages;
+		});
 	};
+
+	const addBotMessage = (message) => {
+		setMessages((prevMessages) => {
+			const newMessages = [...prevMessages, { text: message, user: false }];
+			localStorage.setItem("messages", JSON.stringify(newMessages));
+			return newMessages;
+		});
+	};
+
+	useEffect(() => {
+		if (selectedText) {
+			addUserMessage(`Can you explain "${selectedText}" in simple terms?`);
+			setTimeout(() => {
+				const botResponse = "yes definate i can help you with that";
+				addBotMessage("...");
+				setTimeout(() => {
+					setMessages((prevMessages) => {
+						const newMessages = prevMessages.map((msg, index) => {
+							if (index === prevMessages.length - 1) {
+								return { text: botResponse, user: false };
+							}
+							return msg;
+						});
+						localStorage.setItem("messages", JSON.stringify(newMessages));
+						return newMessages;
+					});
+				}, 2000);
+			}, 500);
+		}
+	}, [selectedText]);
 
 	const handleSendMessage = () => {
 		if (userInput.trim() !== "") {
@@ -53,7 +87,16 @@ export default function ChatComponent({ isOpen, setIsChatOpen }) {
 		if (chatboxRef.current) {
 			chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
 		}
+		if (inputRef.current) {
+			inputRef.current.scrollIntoView({ behavior: "smooth" });
+		}
 	}, [messages]);
+
+	useEffect(() => {
+		if (isOpen && chatboxRef.current) {
+			chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
+		}
+	}, [isOpen]);
 
 	return (
 		<div className="">
@@ -74,7 +117,7 @@ export default function ChatComponent({ isOpen, setIsChatOpen }) {
 					align="end"
 					className="data-[side=bottom]:slide-in-from-top-2 w-[400px]"
 				>
-					<div className="flex flex-col gap-6 p-5 text-sm">
+					<div className="flex flex-col gap-6 p-5 text-sm max-h-[500px] overflow-y-auto" ref={chatboxRef}>
 						{messages.map((message, index) => (
 							<div
 								key={index}
@@ -91,7 +134,7 @@ export default function ChatComponent({ isOpen, setIsChatOpen }) {
 								</div>
 							</div>
 						))}
-						<div className="flex gap-3">
+						<div className="flex gap-3" ref={inputRef}>
 							<Input
 								type="text"
 								placeholder="Type your message..."
