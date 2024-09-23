@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -117,7 +118,10 @@ export default function ChatComponent({ isOpen, setIsChatOpen, selectedText }) {
 					align="end"
 					className="data-[side=bottom]:slide-in-from-top-2 w-[400px]"
 				>
-					<div className="flex flex-col gap-6 p-5 text-sm max-h-[500px] overflow-y-auto" ref={chatboxRef}>
+					<div
+						className="flex flex-col gap-6 p-5 text-sm max-h-[500px] overflow-y-auto"
+						ref={chatboxRef}
+					>
 						{messages.map((message, index) => (
 							<div
 								key={index}
