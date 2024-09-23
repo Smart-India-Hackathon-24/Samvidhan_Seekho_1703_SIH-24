@@ -100,7 +100,7 @@ const ChatComponent = () => {
 	}, [messages, streamingMessage]);
 
 	return (
-		<div>
+		<div className="">
 			<div className=" chatBot flex items-center justify-center my-2">
 				<button
 					id="open-chat"
@@ -125,7 +125,7 @@ const ChatComponent = () => {
 				</button>
 			</div>
 			{isChatboxOpen && (
-				<div className="top-0 bottom-0 inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+				<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 flex justify-center items-center">
 					<div
 						ref={chatContainerRef}
 						id="chat-container"
