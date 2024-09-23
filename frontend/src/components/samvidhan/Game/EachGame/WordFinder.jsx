@@ -11,22 +11,18 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 const words = [
-	// "CONSTITUTION",
-	// "JUSTICE",
-	// "DEMOCRACY",
-	// "RIGHTS",
-	// "AMENDMENT",
-	// "JUDICIARY",
-	// "PARLIAMENT",
-	// "FEDERALISM",
-	"LAW",
-	"COURT",
-	"LAWYER",
-	"JUSTICE",
-	"FEDERAL",
+	"JUDICIARY",
+	"PARLIAMENT",
+	"FEDERALISM",
+	"LEGISLATURE",
+	"EXECUTIVE",
+	"EQUALITY",
+	"FREEDOM",
+	"SECULARISM",
+	"SOVEREIGNTY",
 ];
-const gridSize = 7;
-const maxAttempts = 20;
+const gridSize = 15;
+const maxAttempts = 15;
 
 const generateGrid = (wordsToPlace) => {
 	const grid = Array(gridSize)
@@ -47,10 +43,13 @@ const generateGrid = (wordsToPlace) => {
 	const wordColors = {};
 	const usedColors = new Set();
 
+	// Limit the number of attempts to place each word
+	const maxWordPlacementAttempts = 20;
+
 	wordsToPlace.forEach((word) => {
 		let placed = false;
 		let attempts = 0;
-		while (!placed && attempts < 100) {
+		while (!placed && attempts < maxWordPlacementAttempts) {
 			const direction =
 				directions[Math.floor(Math.random() * directions.length)];
 			const start = {

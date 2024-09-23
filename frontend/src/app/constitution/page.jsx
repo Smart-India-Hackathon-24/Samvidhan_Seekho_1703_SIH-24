@@ -1,381 +1,263 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import data from "./constitutiondata";
 import { File, Folder, Tree } from "@/components/magicui/file-tree";
 import ChatComponent from "@/components/samvidhan/Constitution/ChatComponent";
+import { LucideWandSparkles } from "lucide-react";
 
 export default function page() {
-  //   const [openPartitions, setOpenPartitions] = useState({});
-  //   const [openSubPartitions, setOpenSubPartitions] = useState({}); // State for sub-partition collapsibles
-  const initialOpenPartitions = {};
-  const initialOpenSubPartitions = {};
+	//   const [openPartitions, setOpenPartitions] = useState({});
+	//   const [openSubPartitions, setOpenSubPartitions] = useState({}); // State for sub-partition collapsibles
+	const initialOpenPartitions = {};
+	const initialOpenSubPartitions = {};
 
-  // Initialize open state for all partitions and sub-partitions
-  data.forEach((part) => {
-    initialOpenPartitions[part.partition_number] = true; // Open all main partitions
-    part.sub_partitions?.forEach((sub) => {
-      initialOpenSubPartitions[sub.partition_id] = true; // Open all sub-partitions
-    });
-  });
+	// Initialize open state for all partitions and sub-partitions
+	data.forEach((part) => {
+		initialOpenPartitions[part.partition_number] = true; // Open all main partitions
+		part.sub_partitions?.forEach((sub) => {
+			initialOpenSubPartitions[sub.partition_id] = true; // Open all sub-partitions
+		});
+	});
 
-  const [openPartitions, setOpenPartitions] = useState(initialOpenPartitions);
-  const [openSubPartitions, setOpenSubPartitions] = useState(
-    initialOpenSubPartitions
-  );
+	const [openPartitions, setOpenPartitions] = useState(initialOpenPartitions);
+	const [openSubPartitions, setOpenSubPartitions] = useState(
+		initialOpenSubPartitions
+	);
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+	const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+	const toggleSidebar = () => {
+		setIsSidebarOpen(!isSidebarOpen);
+	};
 
-  const [articleId, setArticleId] = useState("");
-  const handleArticleClick = (id) => {
-    setArticleId(id);
-  };
-  const ELEMENTS = data.map(part => ({
-	id: part.partition_number, // Use partition_number as the id
-	isSelectable: false, // Set to false for folders
-	name: part.partition_title,
-	children: part.sub_partitions?.map(sub => ({
-	  id: sub.partition_id, // Use partition_id as the id for sub-partitions
-	  isSelectable: false, // Set to false for folders
-	  name: sub.partition_number + '' + sub.partition_title,
-	//   children: sub.sub_partitions?.map(subPart => ({
-	// 	id: subPart.partition_id, // Use partition_id as the id for sub-sub-partitions
-	// 	isSelectable: true, // Set to true for files
-	// 	name: subPart.partition_title,
-	//   })) || [],
-	})) || [],
-  }));
-  const [tooltipVisible, setTooltipVisible] = useState(false); // State for tooltip visibility
-  const [tooltipPosition, setTooltipPosition] = useState({ top: 0, left: 0 }); // State for tooltip position
-  const [selectedText, setSelectedText] = useState('');
-const [showAI,setShowAI] = useState(false);
-  const handleTextSelection = () => {
-    const selection = window.getSelection();
-    const text = selection.toString().trim();
-    if (text) {
-      const range = selection.getRangeAt(0);
-      const rect = range.getBoundingClientRect();
-      setTooltipPosition({
-        top: rect.top + window.scrollY - 35, // Adjusted to appear above the selected text
-        left: rect.left + window.scrollX,
-      });
-      setTooltipVisible(true);
-      setSelectedText(text);
-      
+	const [articleId, setArticleId] = useState("66d6a855e1d17e5da704bb84");
+	const handleArticleClick = (id) => {
+		console.log("id: ", id);
+		setArticleId(id);
+	};
+	const ELEMENTS = data.map((part) => ({
+		id: part.partition_number, // Use partition_number as the id
+		isSelectable: false, // Set to false for folders
+		name: part.partition_title,
+		children:
+			part.sub_partitions?.map((sub) => ({
+				id: sub.partition_id, // Use partition_id as the id for sub-partitions
+				isSelectable: false, // Set to false for folders
+				name: sub.partition_number + "" + sub.partition_title,
+				//   children: sub.sub_partitions?.map(subPart => ({
+				// 	id: subPart.partition_id, // Use partition_id as the id for sub-sub-partitions
+				// 	isSelectable: true, // Set to true for files
+				// 	name: subPart.partition_title,
+				//   })) || [],
+			})) || [],
+	}));
 
-    } else {
-      setTooltipVisible(false);
-      setSelectedText('');
+	const [selectedText, setSelectedText] = useState("");
+	const [popoverPosition, setPopoverPosition] = useState({ top: 0, left: 0 });
+	const [isPopoverVisible, setIsPopoverVisible] = useState(false);
+	const [isChatOpen, setIsChatOpen] = useState(false);
+	const articleRef = useRef(null);
 
-    }
-  };
+	const handleTextSelection = () => {
+		const selection = window.getSelection();
+		const text = selection.toString().trim();
+		if (text) {
+			const range = selection.getRangeAt(0);
+			const rect = range.getBoundingClientRect();
+			console.log("rect: ", rect);
+			console.log(window.scrollY);
+			console.log(window.scrollX);
+			setPopoverPosition({
+				top: rect.top + window.scrollY - 75, // Adjusted to be 40px above the selected text
+				left: rect.left + window.scrollX - 450, // Centered horizontally and ensure it doesn't move out of parent
+				// right: rect.right + window.scrollX, // Centered horizontally and ensure it doesn't move out of parent
+			});
+			setSelectedText(text);
+			setIsPopoverVisible(true);
+		} else {
+			setIsPopoverVisible(false);
+		}
+	};
 
-  
-useEffect(() => {
-  document.addEventListener("mouseup", handleTextSelection);
-  return () => {
-    document.removeEventListener("mouseup", handleTextSelection);
-  };
-}, []);
+	useEffect(() => {
+		document.addEventListener("mouseup", handleTextSelection);
+		return () => {
+			document.removeEventListener("mouseup", handleTextSelection);
+		};
+	}, []);
 
-  return (
-    <div className="flex p-10">
-      <div className={`w-3/12`}>
-        <div className="">
-          {/* <span
-            className=" text-black text-4xl cursor-pointer"
-            onClick={toggleSidebar}
-          >
-            ☰
-          </span> */}
-		  {isSidebarOpen && (
-  <div className="fixed w-80 overflow-y-auto rounded-lg">
-    <div className="text-gray-100 text-xl">
-      <h1 className="font-bold text-gray-800 text-[15px] ml-3">Constitution</h1>
-      <span className="bi bi-x cursor-pointer ml-28 lg:hidden right-0" onClick={toggleSidebar}>X</span>
-    </div>
-    <div className="overflow-y-scroll h-[90vh] my-3 text-black text-wrap">
-	<Tree
-  className="p-2 overflow-hidden rounded-md bg-background truncate"
-  initialSelectedId={articleId} // Set the selected article ID
-  initialExpandedItems={data.map(part => part.partition_number)} // Expand all partitions initially
-  elements={ELEMENTS} // Use the ELEMENTS structure
->
-  {data.map((part) => (
-    <Folder className='truncate' key={part.partition_number} value={part.partition_number} element={part.partition_title}>
-      {part.sub_partitions?.map((sub) => (
-        <Folder key={sub.partition_id} value={sub.partition_id} element={sub.partition_title}>
-          {sub.sub_partitions ? sub.sub_partitions?.map((subPart) => (
-            <File key={subPart.partition_id} value={subPart.partition_id}>
-              <p onClick={() => handleArticleClick(subPart.partition_id)}>
-                {subPart.partition_number} {subPart.partition_title}
-              </p>
-            </File>
-          )): <File key={sub.partition_id} value={sub.partition_id}>
-		  <p onClick={() => handleArticleClick(sub.partition_id)}>
-			{sub.partition_number} {sub.partition_title}
-		  </p>
-		</File>}
-        </Folder>
-      ))}
-    </Folder>
-  ))}
-</Tree>
-    </div>
-  </div>
-)}
-          {/* {isSidebarOpen && (
-            <div className=" fixed top-0 bottom-0 p-2 w-80 overflow-y-auto  bg-gray-900">
-              <div className="text-gray-100 text-xl">
-                <div className="p-2.5 mt-1 flex items-center">
+	const handleSimplifyClick = () => {
+		setIsPopoverVisible(false);
+		setIsChatOpen(true);
+	};
 
-                  <h1 className="font-bold text-gray-200 text-[15px] ml-3">
-                    Constitution
-                  </h1>
-                  <span
-                    className="bi bi-x cursor-pointer ml-28 lg:hidden right-0"
-                    onClick={toggleSidebar}
-                  >
-                    X
-                  </span>
-                </div>
-                <div className="my-2 bg-gray-600 h-[1px]"></div>
-              </div>
-              <div className="overflow-y-scroll h-[90vh] my-3 text-white text-wrap">
-                {data?.map((part) => {
-                  const isOpen = openPartitions[part.partition_number] || false;
-
-                  return (
-                    <div
-                      key={part.partition_number}
-                      className="overflow-scroll"
-                    >
-                      <h1
-                        onClick={() =>
-                          setOpenPartitions((prev) => ({
-                            ...prev,
-                            [part.partition_number]: !isOpen,
-                          }))
-                        }
-                        style={{ cursor: "pointer" }}
-                      >
-                        {part.partition_number} {isOpen ? "▽" : "△"}
-                        <p className="ps-2 truncate">{part.partition_title}</p>
-                      </h1>
-                      {isOpen &&
-                        part.sub_partitions?.map((sub) => {
-                          const isSubOpen =
-                            openSubPartitions[sub.partition_id] || false; 
-
-                          return (
-                            <div key={sub.partition_id}>
-                              {sub.sub_partitions ? (
-                                <>
-                                  <h3 className="ps-10">
-                                    {sub.partition_title}{" "}
-                                    {isSubOpen ? "▼" : "▲"}
-                                  </h3>
-                                  {sub.sub_partitions?.map((subPart) => {
-                                    return (
-                                      <>
-                                        <p
-                                          className="ps-20 truncate"
-                                          onClick={() =>
-                                            handleArticleClick(
-                                              subPart.partition_id
-                                            )
-                                          }
-                                        >
-                                          {subPart.partition_number}{" "}
-                                          {isSubOpen ? "▼" : "▲"}
-                                        </p>
-                                        {isSubOpen && (
-                                          <>
-                                            <p
-                                              className="ps-24 truncate"
-                                              onClick={() =>
-                                                handleArticleClick(
-                                                  sub.partition_id
-                                                )
-                                              }
-                                            >
-                                              {subPart.partition_title}
-                                            </p>
-                                          </>
-                                        )}
-                                      </>
-                                    );
-                                  })}
-                                </>
-                              ) : (
-                                <>
-                                  <h3
-                                    onClick={() =>
-                                      setOpenSubPartitions((prev) => ({
-                                        ...prev,
-                                        [sub.partition_id]: !isSubOpen,
-                                      }))
-                                    }
-                                    className="ps-10 truncate cursor-pointer"
-                                  >
-                                    {sub.partition_number}{" "}
-                                    {isSubOpen ? "▼" : "▲"}
-                                  </h3>
-                                  {isSubOpen && (
-                                    <>
-                                      <p
-                                        className="ps-20 truncate"
-                                        onClick={() =>
-                                          handleArticleClick(sub.partition_id)
-                                        }
-                                      >
-                                        {sub.partition_title}
-                                      </p>
-                                    </>
-                                  )}
-                                </>
-                              )}
-                            </div>
-                          );
-                        })}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )} */}
-        </div>
-      </div>
-      <div className="w-9/12 relative" >
-        {/* {data[articleId]} */}
-        <div className="my-2 px-4 gap-3">
-          <h1 className="text-xl text-center font-bold">
-            Article 5. Citizenship at the commencement of the Constitution.  
-          </h1>
-          <p className="my-2">
-		  At the commencement of this Constitution, every person who has his domicile in the territory of India and –
-          </p>
-          <p className="my-2">
-            The Directive Principles of State Policy contained in Part IV of the
-            Constitution set out the aims and objectives to be taken up by the
-            States in the governance of the country. This novel features of the
-            Constitution is borrowed from the Constitution of Ireland which had
-            copied it from the Spanish Constitution.
-          </p>
-
-		  <ul className="gap-8">
-          <li>
-		  (a) who was born in the territory of India; or
-        </li>
-          <li>
-		  (b) either of whose parents were born in the territory of India; or
-          </li>
-          <li>(c) who has been ordinarily resident in the territory of India for not less than five years immediately preceding such commencement, shall be a citizen of India.
-          </li>
-		  </ul>
-      {tooltipVisible && (
-  <button
-    style={{
-      position: "absolute",
-      top: tooltipPosition.y,
-      left: tooltipPosition.x,
-      zIndex: 1000,
-    }}
-    className="bg-gray-800 py-2 px-6 rounded-lg text-white "
-    onClick={()=>setShowAI(true)}
-  >
-    Ask to AI
-  </button>)}
-        </div>
-
-        <ChatComponent userText={selectedText} showAI={showAI} />
-      </div>
-      
-  
-      {/* <div className="w-3/12 ">
-        
-      </div> */}
-    </div>
-  );
-}
-
-{
-  /* <Sheet key={"left"}>
-          <SheetTrigger asChild>
-            <Button variant="outline">
-              
-            </Button>
-          </SheetTrigger>
-          <SheetContent side={"left"}>
-            <SheetHeader>
-              <SheetTitle>Edit profile</SheetTitle>
-              <SheetDescription>
-                Make changes to your profile here. Click save when you're done.
-              </SheetDescription>
-            </SheetHeader>
-            <div className="overflow-scroll h-[60vh] my-3">
-              {data?.map((part) => {
-                const isOpen = openPartitions[part.partition_number] || false;
-
-                return (
-                  <div key={part.partition_number} className="overflow-scroll">
-                    <h1
-                      onClick={() =>
-                        setOpenPartitions((prev) => ({
-                          ...prev,
-                          [part.partition_number]: !isOpen,
-                        }))
-                      }
-                      style={{ cursor: "pointer" }}
-                    >
-                      {part.partition_number} {isOpen ? "▽" : "△"}
-                      <h2 className="ms-2">{part.partition_title}</h2>
-                    </h1>
-                    {isOpen &&
-                      part.sub_partitions?.map((sub) => {
-                        const isSubOpen =
-                          openSubPartitions[sub.partition_id] || false; // Get open state for sub-partition
-
-                        return (
-                          <div key={sub.partition_id}>
-                            <h3
-                              onClick={() =>
-                                setOpenSubPartitions((prev) => ({
-                                  ...prev,
-                                  [sub.partition_id]: !isSubOpen,
-                                }))
-                              }
-                              className="ms-10 cursor-pointer"
-                            >
-                              {sub.partition_number} {isSubOpen ? "▼" : "▲"}
-                            </h3>
-                            {isSubOpen && (
-                              <p
-                                className="ms-12"
-                                onClick={() =>
-                                  handleArticleClick(sub.partition_id)
-                                }
-                              >
-                                {sub.partition_title}
-                              </p>
-                            )}
-                          </div>
-                        );
-                      })}
-                  </div>
-                );
-              })}
-            </div>
-            <SheetFooter>
-              <SheetClose asChild>
-                <Button type="submit" className="my-3">
-                  Save changes
-                </Button>
-              </SheetClose>
-            </SheetFooter>
-          </SheetContent>
-        </Sheet> */
+	return (
+		<div className="flex gap-10 p-8 h-dvh">
+			<div
+				className={`w-3/12 h-full border-2 rounded-xl overflow-scroll shadow-xl p-5 `}
+			>
+				{isSidebarOpen && (
+					<div className="">
+						<div className="text-gray-100 text-xl">
+							<h1 className="font-bold text-gray-800 text-[15px] ml-3">
+								Constitution
+							</h1>
+							<span
+								className="bi bi-x cursor-pointer ml-28 lg:hidden right-0"
+								onClick={toggleSidebar}
+							>
+								X
+							</span>
+						</div>
+						<div className="text-black text-wrap overflow-scroll">
+							<Tree
+								className="p-2 overflow-hidden rounded-md bg-background truncate"
+								initialSelectedId={articleId} // Set the selected article ID
+								initialExpandedItems={data.map((part) => part.partition_number)} // Expand all partitions initially
+								elements={ELEMENTS} // Use the ELEMENTS structure
+							>
+								{data.map((part) =>
+									part.sub_partitions ? (
+										<Folder
+											className="truncate font-bold"
+											key={part.partition_number}
+											value={part.partition_number}
+											element={
+												part.partition_number + " " + part.partition_title
+											}
+										>
+											{part.sub_partitions?.map((sub) => (
+												<Folder
+													key={sub.partition_id}
+													value={sub.partition_id}
+													element={sub.partition_title}
+												>
+													{sub.sub_partitions ? (
+														sub.sub_partitions?.map((subPart) => (
+															<File
+																key={subPart.partition_id}
+																value={subPart.partition_id}
+																className="bg-black text-white px-2 py-1"
+															>
+																<p
+																	onClick={() =>
+																		handleArticleClick(subPart.partition_id)
+																	}
+																>
+																	{subPart.partition_number}{" "}
+																</p>
+															</File>
+														))
+													) : (
+														<File
+															key={sub.partition_id}
+															value={sub.partition_id}
+															className={
+																articleId === sub.partition_id
+																	? "bg-black text-white px-2 py-1"
+																	: "bg-gray-200 text-black px-2 py-1"
+															}
+														>
+															<p
+																onClick={() =>
+																	handleArticleClick(sub.partition_id)
+																}
+															>
+																{sub.partition_number}
+															</p>
+														</File>
+													)}
+												</Folder>
+											))}
+										</Folder>
+									) : (
+										<File
+											key={part.partition_id}
+											value={part.partition_id}
+											className="bg-black text-white"
+										>
+											<p onClick={() => handleArticleClick(part.partition_id)}>
+												{part.partition_number}
+											</p>
+										</File>
+									)
+								)}
+							</Tree>
+						</div>
+					</div>
+				)}
+			</div>
+			<div className="flex-1 border-2 rounded-xl shadow-xl relative p-16 h-full overflow-scroll">
+				{/* {data[articleId]} */}
+				<div className="my-2 px-4 gap-3 relative">
+					<h1 className="text-4xl text-center font-bold">Article 3</h1>
+					<h3 className="text-lg text-center font-semibold my-2">
+						Formation of new States and alteration of areas, boundaries or names
+						of existing States.
+					</h3>
+					<p className="my-5 mt-10">Parliament may by law—</p>
+					<ul className="gap-2 flex flex-col">
+						<li>
+							<b>(a)</b> form a new State by separation of territory from any
+							State or by uniting two or more States or parts of States or by
+							uniting any territory to a part of any State;
+						</li>
+						<li>
+							<b>(b)</b> increase the area of any State;
+						</li>
+						<li>
+							<b>(c)</b> diminish the area of any State;
+						</li>
+						<li>
+							<b>(d)</b> alter the boundaries of any State;
+						</li>
+						<li>
+							<b>(e)</b> alter the name of any State;
+						</li>
+					</ul>
+					<p className="my-5">
+						Provided that no Bill for the purpose shall be introduced in either
+						House of Parliament except on the recommendation of the President
+						and unless, where the proposal contained in the Bill affects the
+						area, boundaries or name of any of the States, the Bill has been
+						referred by the President to the Legislature of that State for
+						expressing its views thereon within such period as may be specified
+						in the reference or within such further period as the President may
+						allow and the period so specified or allowed has expired.
+					</p>
+					<p className="my-5">
+						Explanation I.—In this article, in clauses (a) to (e), "State"
+						includes a Union territory, but in the proviso, "State" does not
+						include a Union territory.
+					</p>
+					<p className="my-5">
+						Explanation II.—The power conferred on Parliament by clause (a)
+						includes the power to form a new State or Union territory by uniting
+						a part of any State or Union territory to any other State or Union
+						territory.
+					</p>
+				</div>
+				{isPopoverVisible && (
+					<button
+						onClick={handleSimplifyClick}
+						style={{
+							top: popoverPosition.top,
+							left: popoverPosition.left,
+						}}
+						className="bg-black absolute text-white px-2 py-1 flex items-center gap-3 rounded shadow"
+					>
+						<LucideWandSparkles className="w-5 h-5" />
+						Simplify this text
+					</button>
+				)}
+				<div className="absolute right-10 top-5">
+					<ChatComponent
+						isOpen={isChatOpen}
+						setIsChatOpen={setIsChatOpen}
+						selectedText={selectedText}
+					/>
+				</div>
+			</div>
+		</div>
+	);
 }

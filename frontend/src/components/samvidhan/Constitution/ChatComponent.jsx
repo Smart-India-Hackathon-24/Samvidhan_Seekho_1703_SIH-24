@@ -1,238 +1,174 @@
-import axios from "axios";
-import React, { useState, useEffect, useRef } from "react";
+"use client";
+import { useState, useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import {
+	Popover,
+	PopoverContent,
+	PopoverTrigger,
+} from "@/components/ui/popover";
+import { LucideBotMessageSquare } from "lucide-react";
+import { Input } from "@/components/ui/input";
 
-const ChatComponent = ({userText,showAI}) => {
-	console.log(showAI)
-  const [isChatboxOpen, setIsChatboxOpen] = useState(showAI);
-  const [messages, setMessages] = useState([
-    {
-      text: "Hello! You are currently viewing Article 5, which deals with citizenship at the commencement of the Constitution. Feel free to ask me any questions regarding this article.",
-      user: false,
-    },
-    {
-      text: "What does Article 5 specify?",
-      user: true,
-    },
-    {
-      text: "Article 5 of the Constitution specifies that at the commencement of the Constitution (on January 26, 1950), every person who had their domicile in the territory of India and met certain conditions would be considered a citizen of India. These conditions included being born in India, having Indian parents, or residing in India for at least five years prior to this date.",
-      user: false,
-    },
+const initialMessages = [
 	{
-		text:`What is the mean of this: ${userText}`,
-		user:true	
-	}
+		text: "Hello! I m your AI chatbot. You can ask me anything about the Constitution of India. I will try my best to answer your questions.",
+		user: false,
+	},
+	{
+		text: "What does Article 3 specify?",
+		user: true,
+	},
+	{
+		text: "Article 3 of the Constitution outlines the process by which Parliament can form new states, alter the boundaries of existing states, or change their names. It requires the President's recommendation and, in cases affecting a state's area, boundaries, or name, the state legislature's opinion.",
+		user: false,
+	},
+];
 
-  ]);
-  const [streamingMessage, setStreamingMessage] = useState("");
-  const [isStreaming, setIsStreaming] = useState(false);
-  const chatContainerRef = useRef(null);
-  const chatboxRef = useRef(null);
+export default function ChatComponent({ isOpen, setIsChatOpen, selectedText }) {
+	const [messages, setMessages] = useState(initialMessages);
+	const [userInput, setUserInput] = useState("");
+	const chatContainerRef = useRef(null);
+	const chatboxRef = useRef(null);
+	const inputRef = useRef(null);
 
-  const chatBot = (data) => {
-    setIsStreaming(true);
-    setStreamingMessage(""); // Clear previous streaming message
-    axios
-      .post("http://localhost:5000/api/getAnswerBot", { question: data })
-      .then((response) => {
-        const botResponse = response.data;
-        let i = -1;
-        const streamInterval = setInterval(() => {
-          if (i < botResponse.length) {
-            setStreamingMessage((prev) => prev + botResponse[i]);
-            i++;
-            if (chatboxRef.current) {
-              chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
-            }
-          } else {
-            clearInterval(streamInterval);
-            setMessages((prevMessages) => [
-              ...prevMessages,
-              { text: botResponse, user: false },
-            ]);
-            setStreamingMessage("");
-            setIsStreaming(false);
-          }
-        }, 20);
-      })
-      .catch((err) => {
-        console.log(err);
-        setIsStreaming(false);
-      });
-  };
-  const [userInput, setUserInput] = useState("");
+	const addUserMessage = (message) => {
+		setMessages((prevMessages) => {
+			const newMessages = [...prevMessages, { text: message, user: true }];
+			if (typeof window !== "undefined") {
+				localStorage.setItem("messages", JSON.stringify(newMessages));
+			}
+			return newMessages;
+		});
+	};
 
-  const toggleChatbox = () => {
-    setIsChatboxOpen(!isChatboxOpen);
-  };
+	const addBotMessage = (message) => {
+		setMessages((prevMessages) => {
+			const newMessages = [...prevMessages, { text: message, user: false }];
+			if (typeof window !== "undefined") {
+				localStorage.setItem("messages", JSON.stringify(newMessages));
+			}
+			return newMessages;
+		});
+	};
 
-  const addUserMessage = (message) => {
-    setMessages([...messages, { text: message, user: true }]);
-  };
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			const storedMessages = JSON.parse(localStorage.getItem("messages"));
+			if (storedMessages) {
+				setMessages(storedMessages);
+			}
+		}
+	}, []);
 
-  const handleSendMessage = () => {
-    if (userInput.trim() !== "") {
-      addUserMessage(userInput);
-      chatBot(userInput);
-      setUserInput("");
-    }
-  };
+	useEffect(() => {
+		if (selectedText) {
+			addUserMessage(`Can you explain "${selectedText}" in simple terms?`);
+			setTimeout(() => {
+				const botResponse = "yes definate i can help you with that";
+				addBotMessage("...");
+				setTimeout(() => {
+					setMessages((prevMessages) => {
+						const newMessages = prevMessages.map((msg, index) => {
+							if (index === prevMessages.length - 1) {
+								return { text: botResponse, user: false };
+							}
+							return msg;
+						});
+						if (typeof window !== "undefined") {
+							localStorage.setItem("messages", JSON.stringify(newMessages));
+						}
+						return newMessages;
+					});
+				}, 2000);
+			}, 500);
+		}
+	}, [selectedText]);
 
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
-      handleSendMessage();
-    }
-  };
+	const handleSendMessage = () => {
+		if (userInput.trim() !== "") {
+			addUserMessage(userInput);
+			setUserInput("");
+		}
+	};
 
-  // useEffect(() => {
-  // 	const handleClickOutside = (event) => {
-  // 		if (
-  // 			chatContainerRef.current &&
-  // 			!chatContainerRef.current.contains(event.target)
-  // 		) {
-  // 			setIsChatboxOpen(false);
-  // 		}
-  // 	};
+	const handleKeyPress = (event) => {
+		if (event.key === "Enter") {
+			handleSendMessage();
+		}
+	};
 
-  // 	document.addEventListener("mousedown", handleClickOutside);
-  // 	return () => {
-  // 		document.removeEventListener("mousedown", handleClickOutside);
-  // 	};
-  // }, []);
+	useEffect(() => {
+		if (chatboxRef.current) {
+			chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
+		}
+		if (inputRef.current) {
+			inputRef.current.scrollIntoView({ behavior: "smooth" });
+		}
+	}, [messages]);
 
-  useEffect(() => {
-    if (chatboxRef.current) {
-      chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
-    }
-  }, [messages, streamingMessage]);
+	useEffect(() => {
+		if (isOpen && chatboxRef.current) {
+			chatboxRef.current.scrollTop = chatboxRef.current.scrollHeight;
+		}
+	}, [isOpen]);
 
-
-
-  return (
-    <div>
-      <div className="absolute top-0 right-0 chatBot flex items-center justify-center my-2">
-        <button
-          id="open-chat"
-          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 flex items-center text-center"
-          onClick={toggleChatbox}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 mr-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-            ></path>
-          </svg>
-          Chat with Bot
-        </button>
-      </div>
-      {isChatboxOpen && (
-        <div className="absolute top-0 right-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div
-            ref={chatContainerRef}
-            id="chat-container"
-            className="w-[40vw] h-[80vh]"
-          >
-            <div className="bg-white shadow-md rounded-lg h-full w-full flex flex-col justify-between"
-			>
-              <div className="p-4 border-b bg-blue-500 text-white rounded-t-lg flex justify-between items-center">
-                <p className="text-lg font-semibold">Constitution AI</p>
-                <button
-                  id="close-chat"
-                  className="text-gray-300 hover:text-gray-400 focus:outline-none focus:text-gray-400"
-                  onClick={toggleChatbox}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-              <div
-                id="chatbox"
-                ref={chatboxRef}
-                className="p-8 flex-grow overflow-y-auto"
-              >
-                {messages.map((message, index) => (
-                  <div
-                    key={index}
-                    className={`mb-2 ${message.user ? "text-right" : ""}`}
-                  >
-                    <p
-                      className={`rounded-lg py-2 px-4 inline-block  ${
-                        message.user
-                          ? "bg-blue-500 text-white"
-                          : "bg-gray-200 text-gray-700"
-                      }`}
-                    >
-                      {message.text}
-                    </p>
-                  </div>
-                ))}
-                {isStreaming && (
-                  <div className="mb-2">
-                    <p
-                      className={`rounded-lg py-2 px-4 ${
-                        streamingMessage.length === 0
-                          ? "animate-pulse flex items-center justify-center h-10 w-20"
-                          : ""
-                      }  inline-block max-w-[70%] bg-gray-200 text-gray-700`}
-                    >
-                      {streamingMessage.length === 0 ? (
-                        <div className="flex items-center justify-center !w-fit space-x-1">
-                          <div className="w-2 h-2 bg-gray-700 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-gray-700 rounded-full animate-bounce animation-delay-2000"></div>
-                          <div className="w-2 h-2 bg-gray-700 rounded-full animate-bounce animation-delay-400"></div>
-                        </div>
-                      ) : (
-                        <>{streamingMessage}</>
-                      )}
-                    </p>
-                  </div>
-                )}
-              </div>
-              <div className="p-4 border-t flex">
-                <input
-                  id="user-input"
-                  type="text"
-                  placeholder="Type a message"
-                  className="w-full px-3 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  value={userInput}
-                  onChange={(e) => setUserInput(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                />
-                <button
-                  id="send-button"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-r-md hover:bg-blue-600 transition duration-300"
-                  onClick={handleSendMessage}
-                >
-                  Send
-                </button>
-              </div>
-            </div>
-          </div>
-		  
-        </div>
-		
-      )}
-    </div>
-  );
-};
-
-export default ChatComponent;
+	return (
+		<div className="">
+			<Popover open={isOpen} onOpenChange={setIsChatOpen}>
+				<PopoverTrigger asChild>
+					<Button
+						id="open-chat"
+						className="bg-black group gap-3 text-white py-2 px-4 rounded-md hover:bg-black/80 transition duration-300 flex items-center text-center"
+						onClick={() => setIsChatOpen(!isOpen)}
+					>
+						<LucideBotMessageSquare />
+						AI Chat
+					</Button>
+				</PopoverTrigger>
+				<PopoverContent
+					asChild
+					sideOffset={10}
+					align="end"
+					className="data-[side=bottom]:slide-in-from-top-2 w-[400px]"
+				>
+					<div
+						className="flex flex-col gap-6 p-5 text-sm max-h-[500px] overflow-y-auto"
+						ref={chatboxRef}
+					>
+						{messages.map((message, index) => (
+							<div
+								key={index}
+								className={`flex  gap-3 ${
+									message.user ? "justify-end" : "justify-start"
+								}`}
+							>
+								<div
+									className={`px-4 py-2 max-w-[80%] rounded-md ${
+										message.user ? "bg-black text-white" : "bg-gray-200"
+									}`}
+								>
+									{message.text}
+								</div>
+							</div>
+						))}
+						<div className="flex gap-3" ref={inputRef}>
+							<Input
+								type="text"
+								placeholder="Type your message..."
+								value={userInput}
+								onChange={(e) => setUserInput(e.target.value)}
+								onKeyDown={handleKeyPress}
+							/>
+							<Button
+								onClick={handleSendMessage}
+								className="bg-black text-white px-4 py-2 rounded-md"
+							>
+								Send
+							</Button>
+						</div>
+					</div>
+				</PopoverContent>
+			</Popover>
+		</div>
+	);
+}
