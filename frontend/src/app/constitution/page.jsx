@@ -172,86 +172,10 @@ export default function page() {
 						Explanation II.—The power conferred on Parliament by clause (a) includes the power to form a new State or Union territory by uniting a part of any State or Union territory to any other State or Union territory.
 					</p>
 				</div>
-				<div className="absolute right-0 top-0"></div>
+        <div className="absolute right-10 top-5">
+          <ChatComponent />
+        </div>
 			</div>
 		</div>
 	);
-}
-
-{
-	/* <Sheet key={"left"}>
-          <SheetTrigger asChild>
-            <Button variant="outline">
-              
-            </Button>
-          </SheetTrigger>
-          <SheetContent side={"left"}>
-            <SheetHeader>
-              <SheetTitle>Edit profile</SheetTitle>
-              <SheetDescription>
-                Make changes to your profile here. Click save when you're done.
-              </SheetDescription>
-            </SheetHeader>
-            <div className="overflow-scroll h-[60vh] my-3">
-              {data?.map((part) => {
-                const isOpen = openPartitions[part.partition_number] || false;
-
-                return (
-                  <div key={part.partition_number} className="overflow-scroll">
-                    <h1
-                      onClick={() =>
-                        setOpenPartitions((prev) => ({
-                          ...prev,
-                          [part.partition_number]: !isOpen,
-                        }))
-                      }
-                      style={{ cursor: "pointer" }}
-                    >
-                      {part.partition_number} {isOpen ? "▽" : "△"}
-                      <h2 className="ms-2">{part.partition_title}</h2>
-                    </h1>
-                    {isOpen &&
-                      part.sub_partitions?.map((sub) => {
-                        const isSubOpen =
-                          openSubPartitions[sub.partition_id] || false; // Get open state for sub-partition
-
-                        return (
-                          <div key={sub.partition_id}>
-                            <h3
-                              onClick={() =>
-                                setOpenSubPartitions((prev) => ({
-                                  ...prev,
-                                  [sub.partition_id]: !isSubOpen,
-                                }))
-                              }
-                              className="ms-10 cursor-pointer"
-                            >
-                              {sub.partition_number} {isSubOpen ? "▼" : "▲"}
-                            </h3>
-                            {isSubOpen && (
-                              <p
-                                className="ms-12"
-                                onClick={() =>
-                                  handleArticleClick(sub.partition_id)
-                                }
-                              >
-                                {sub.partition_title}
-                              </p>
-                            )}
-                          </div>
-                        );
-                      })}
-                  </div>
-                );
-              })}
-            </div>
-            <SheetFooter>
-              <SheetClose asChild>
-                <Button type="submit" className="my-3">
-                  Save changes
-                </Button>
-              </SheetClose>
-            </SheetFooter>
-          </SheetContent>
-        </Sheet> */
 }
